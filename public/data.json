@@ -16,7 +16,7 @@
     },
     {
       "leaveCode": "03644334841",
-       "nationalId": "1128303987",
+      "nationalId": "1128303987",
       "idNumber": "1128303987",
       "name": "غادة عيد ندا العنزي",
       "admissionDate": "2025-10-09",
@@ -26,7 +26,7 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2025-10-09",
       "leaveType": "GSL"
-        },
+    },
     {
       "leaveCode": "44396851993",
       "serviceCode": "44396851993",
@@ -53,6 +53,20 @@
       "doctorName": "هشام عبدة",
       "jobTitle": "أخصائي طب الباطنة",
       "issueDate": "2026-06-21",
+      "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL96270634489",
+      "serviceCode": "PSL96270634489",
+      "nationalId": "5555544545",
+      "idNumber": "5555544545",
+      "name": "ميسون يحيى علي القحطاني",
+      "admissionDate": "2026-06-18",
+      "dischargeDate": "2026-06-22",
+      "leaveDuration": "5",
+      "doctorName": "عبدالله علي",
+      "jobTitle": "استشاري طب الباطنة",
+      "issueDate": "2026-06-22",
       "leaveType": "إجازة مرضية"
     }
   ]
