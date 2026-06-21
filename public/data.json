@@ -96,6 +96,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-06-21",
       "leaveType": "مشهد مراجعة"
+    },
+    {
+      "leaveCode": "PSL38445769449",
+      "serviceCode": "PSL38445769449",
+      "nationalId": "1021912926",
+      "idNumber": "1021912926",
+      "name": "هدى أحمد ",
+      "admissionDate": "2026-06-19",
+      "dischargeDate": "2026-06-23",
+      "leaveDuration": "5",
+      "doctorName": "فواز علي سنان",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-06-23",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
