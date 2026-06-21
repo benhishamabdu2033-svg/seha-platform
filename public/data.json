@@ -68,6 +68,20 @@
       "jobTitle": "استشاري طب الباطنة",
       "issueDate": "2026-06-22",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL38650051591",
+      "serviceCode": "PSL38650051591",
+      "nationalId": "1234123455",
+      "idNumber": "1234123455",
+      "name": "ميسون يحيى علي ",
+      "admissionDate": "2026-06-21",
+      "dischargeDate": "",
+      "leaveDuration": "",
+      "doctorName": "محمود عبده",
+      "jobTitle": "أخصائي طب الباطنة",
+      "issueDate": "2026-06-22",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
