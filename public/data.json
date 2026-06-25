@@ -180,6 +180,20 @@
       "jobTitle": "طبيب عام طب عام",
       "issueDate": "2026-06-27",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26062525824",
+      "serviceCode": "PSL26062525824",
+      "nationalId": "5656575859",
+      "idNumber": "5656575859",
+      "name": "ساجر حمد زيد ",
+      "admissionDate": "2026-06-25",
+      "dischargeDate": "2026-06-25",
+      "leaveDuration": "1",
+      "doctorName": "عبدالرحمن سالم النهدي",
+      "jobTitle": "طبيب طب عام",
+      "issueDate": "2026-06-25",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
