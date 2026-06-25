@@ -208,6 +208,20 @@
       "jobTitle": "طبيبة أسنان عام",
       "issueDate": "2026-06-26",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26063065690",
+      "serviceCode": "PSL26063065690",
+      "nationalId": "4545673455",
+      "idNumber": "4545673455",
+      "name": "ررررقلتل",
+      "admissionDate": "2026-06-26",
+      "dischargeDate": "2026-06-30",
+      "leaveDuration": "5",
+      "doctorName": "شريف منصور",
+      "jobTitle": "أخصائي باطنية (قلب)",
+      "issueDate": "2026-06-30",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
