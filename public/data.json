@@ -124,6 +124,20 @@
       "jobTitle": "استشاري جراحة مخ وأعصاب",
       "issueDate": "2026-06-22",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL13656286057",
+      "serviceCode": "GSL13656286057",
+      "nationalId": "1475525255",
+      "idNumber": "1475525255",
+      "name": "سالم احمد",
+      "admissionDate": "2026-06-24",
+      "dischargeDate": "2026-06-26",
+      "leaveDuration": "3",
+      "doctorName": "محمد خالد القحطاني",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-06-26",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
