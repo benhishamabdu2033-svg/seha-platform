@@ -194,6 +194,20 @@
       "jobTitle": "طبيب طب عام",
       "issueDate": "2026-06-25",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26062639777",
+      "serviceCode": "PSL26062639777",
+      "nationalId": "1124621776",
+      "idNumber": "1124621776",
+      "name": "نسرين",
+      "admissionDate": "2026-06-25",
+      "dischargeDate": "2026-06-26",
+      "leaveDuration": "2",
+      "doctorName": "رشا سامي",
+      "jobTitle": "طبيبة أسنان عام",
+      "issueDate": "2026-06-26",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
