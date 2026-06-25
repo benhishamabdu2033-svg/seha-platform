@@ -697,7 +697,7 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
         c += '.link-verify { font-family: "Times New Roman", serif !important; font-size: 14px; font-weight: bold; color: blue !important; text-decoration: underline; display: block; line-height: 2.9; }';
         c += '.stamp-box { margin-top: 20px; text-align: left; width: 100%; font-weight: bold; line-height: 1.6; color: #000 !important; font-family: "Times New Roman", serif !important; }';
         c += '@media print { @page { size: A3; margin: 0; } body { padding: 50px 60px; } }';
-        c += '</style></head><body><script>document.fonts.ready.then(function(){window.print();});<\/script>';
+        c += '</style></head><body>';
         const titleAr = isCompanion ? 'تقرير مرافقة مريض' : 'تقرير إجازة مرضية';
         const titleEn = isCompanion ? 'Companion SickLeave Report' : 'Sick Leave Report';
         c += '<div class="header"><div style="text-align:right;"><img src="https://i.postimg.cc/k5xY1N5Q/1771635125900.png" height="120"></div><div class="h-center"><img src="https://i.postimg.cc/L4GwNs4M/1771631857257.png"><div class="t-ar">'+titleAr+'</div><div class="t-en">'+titleEn+'</div></div><div style="text-align:left;"><img src="https://i.postimg.cc/9QBmnSBw/sht.png" height="85"></div></div>';
@@ -742,8 +742,13 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
         c += '<div class="btm-left"><img src="https://i.postimg.cc/wxLvyxYk/1782048408335.png" width="130"><div class="verify-box"><span style="font-size: 13px; font-weight: bold; display: block; line-height: 2.6;">للتحقق من بيانات التقرير يرجى التأكد من زيارة موقع منصة صحة<br>الرسمي</span><span style="font-family:\'Times New Roman\'; font-size: 14px; font-weight: bold; letter-spacing: -0.5px; display: block; line-height: 1.1; margin-top: 1px;">To check the report please visit Seha\'s official website</span><a href="/" target="_blank" class="link-verify">www.seha.sa/#/inquiries/slenquiry</a></div><div class="stamp-box"><span dir="ltr">' + strTime + '</span><br><span>' + dateNow + '</span></div></div></div></body></html>';
         
         win.document.write(c);
-        win.document.close();
-    }
+win.document.close();
+
+setTimeout(() => {
+    win.focus();
+    win.print();
+}, 3000);
+}
 
     window.onload = function() {
         initFilters(); 
@@ -753,11 +758,6 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
         const time = now.toTimeString().split(' ')[0].substring(0, 5);
         document.getElementById("printDateTime").value = `${date}T${time}`;
     };
-</script>
-<script>
-document.fonts.ready.then(() => {
-    window.print();
-});
 </script>
 </body>
 </html>
