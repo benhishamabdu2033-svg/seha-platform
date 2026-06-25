@@ -166,6 +166,20 @@
       "jobTitle": "عام  طبيب عام",
       "issueDate": "2026-06-27",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26062767226",
+      "serviceCode": "PSL26062767226",
+      "nationalId": "1475525221",
+      "idNumber": "1475525221",
+      "name": "ساهر",
+      "admissionDate": "2026-06-23",
+      "dischargeDate": "2026-06-27",
+      "leaveDuration": "5",
+      "doctorName": "نايف بن حمد المري",
+      "jobTitle": "طبيب عام طب عام",
+      "issueDate": "2026-06-27",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
