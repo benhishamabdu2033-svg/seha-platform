@@ -222,6 +222,20 @@
       "jobTitle": "أخصائي باطنية (قلب)",
       "issueDate": "2026-06-30",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26062740295",
+      "serviceCode": "GSL26062740295",
+      "nationalId": "1471475555",
+      "idNumber": "1471475555",
+      "name": "سهاء",
+      "admissionDate": "2026-06-25",
+      "dischargeDate": "2026-06-27",
+      "leaveDuration": "3",
+      "doctorName": "محمد خالد القحطاني",
+      "jobTitle": "طبيب طب عام",
+      "issueDate": "2026-06-27",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
