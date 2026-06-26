@@ -264,6 +264,20 @@
       "jobTitle": "أخصائي باطنية",
       "issueDate": "2026-06-28",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL49952238215",
+      "serviceCode": "PSL49952238215",
+      "nationalId": "5432134555",
+      "idNumber": "5432134555",
+      "name": "سلوى سليم",
+      "admissionDate": "2026-06-27",
+      "dischargeDate": "2026-06-27",
+      "leaveDuration": "1",
+      "doctorName": "عبدالله ناصر القصير",
+      "jobTitle": "نائب أول أسنان عامة",
+      "issueDate": "2026-06-27",
+      "leaveType": "مشهد مراجعة"
     }
   ]
 }
