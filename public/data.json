@@ -250,6 +250,20 @@
       "jobTitle": "طبيب طب عام",
       "issueDate": "2026-06-28",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26062814760",
+      "serviceCode": "PSL26062814760",
+      "nationalId": "76576556565",
+      "idNumber": "76576556565",
+      "name": "هلا هب",
+      "admissionDate": "2026-06-27",
+      "dischargeDate": "2026-06-28",
+      "leaveDuration": "2",
+      "doctorName": "طارق الأزرقي",
+      "jobTitle": "أخصائي باطنية",
+      "issueDate": "2026-06-28",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
