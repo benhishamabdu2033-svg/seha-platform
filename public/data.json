@@ -292,6 +292,20 @@
       "jobTitle": "استشاري باطنية (قلب)",
       "issueDate": "2026-06-29",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26062920100",
+      "serviceCode": "PSL26062920100",
+      "nationalId": "9765364785",
+      "idNumber": "9765364785",
+      "name": "سامر سمير ",
+      "admissionDate": "2026-06-29",
+      "dischargeDate": "2026-06-29",
+      "leaveDuration": "1",
+      "doctorName": "خالد بن علي القحطاني",
+      "jobTitle": "طبيب عام طب عام",
+      "issueDate": "2026-06-29",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
