@@ -3,31 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>نظام التقارير الطبية الاحترافي - 2026</title>
-    <!-- Google Fonts fallback link kept for browsers that support it -->
+    <!-- Keep Google Fonts as fallback, but rely on self-hosted fonts for printing -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Preconnect + preload to improve font loading, with crossorigin to allow font use in print renderers -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/notosansarabic/v22/AlZy_zVFtYP12Zncg2kRcQd3Vw.woff2" type="font/woff2" crossorigin>
-    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/notosansarabic/v34/AlZy_zVFtYP12NTMd7xy42eAoq2v9MydyA.woff2" type="font/woff2" crossorigin>
+
+    <!-- Preload local fonts -->
+    <link rel="preload" href="/fonts/NotoSansArabic-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NotoSansArabic-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
     <style>
-        /* Self-declared @font-face pointing at Google CDN (guarantees consistent font-family reference and enables preload) */
         @font-face {
             font-family: 'Noto Sans Arabic';
             font-style: normal;
             font-weight: 400;
-            src: url('https://fonts.gstatic.com/s/notosansarabic/v22/AlZy_zVFtYP12Zncg2kRcQd3Vw.woff2') format('woff2');
-            font-display: block; /* block helps ensure font is used for printing */
+            src: url('/fonts/NotoSansArabic-Regular.woff2') format('woff2');
+            font-display: block;
         }
         @font-face {
             font-family: 'Noto Sans Arabic';
             font-style: normal;
             font-weight: 700;
-            src: url('https://fonts.gstatic.com/s/notosansarabic/v34/AlZy_zVFtYP12NTMd7xy42eAoq2v9MydyA.woff2') format('woff2');
+            src: url('/fonts/NotoSansArabic-Bold.woff2') format('woff2');
             font-display: block;
         }
 
-        /* Keep original styles — only enforce font-family to use Noto Sans Arabic explicitly */
         body { font-family: 'Noto Sans Arabic', sans-serif !important; background: #f0f2f5; padding: 20px; direction: rtl; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
         .form-card { background: white; max-width: 850px; margin: auto; padding: 30px; border-radius: 12px; border-top: 8px solid #1e4a7a; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 10px; }
@@ -59,66 +57,199 @@
         </label>
     </div>
     
-    <!-- rest of the original HTML remains unchanged -->
+    <div class="db-section">
+        <div class="sh" style="margin-top:0;">البحث السريع في قاعدة البيانات</div>
+        <div class="grid">
+            <div><label>المنطقة</label><select id="selRegion" onchange="updateFilters()"><option value="">-- اختر المنطقة --</option></select></div>
+            <div><label>نوع المنشأة</label><select id="selType" onchange="updateFilters()"><option value="">-- اختر النوع --</option><option value="خاص">خاص</option><option value="حكومي">حكومي</option></select></div>
+        </div>
+        <div class="grid">
+            <div>
+                <label>المنشأة</label>
+                <input type="text" id="hospSearch" placeholder="🔍 ابحث باسم المنشأة..." oninput="updateFilters()" style="margin-bottom:6px; background:#fffbe6; border:1px solid #ffe58f;">
+                <select id="selHospital" onchange="updateFilters()"><option value="">-- اختر المنشأة --</option></select>
+            </div>
+            <div><label>التخصص</label><select id="selSpecialty" onchange="updateFilters()"><option value="">-- اختر التخصص --</option></select></div>
+        </div>
+        <label>اسم الطبيب</label>
+        <select id="selDoctor" onchange="applyDoctorData()"><option value="">-- اختر الطبيب الممارس --</option></select>
+    </div>
 
-    <!-- ... (full form and scripts — unchanged except for print window generation below) ... -->
+    <form id="reportForm">
+        <div class="sh">التوثيق والنظام (توليد آلي)</div>
+        <div class="grid">
+            <div>
+                <label>رمز الخدمة (Service Code)</label>
+                <input type="text" id="serviceCode" style="background: #fffbe6; border: 1px solid #ffe58f;">
+            </div>
+            <div>
+                <label>تاريخ ووقت الطباعة</label>
+                <input type="datetime-local" id="printDateTime" style="background: #fffbe6; border: 1px solid #ffe58f;">
+            </div>
+        </div>
 
+        <div class="sh" id="patientSectionTitle">بيانات المريض والتواريخ</div>
+        <div class="grid" id="patientNameRow">
+            <div><label id="lblNameAr">الاسم (عربي)</label><input type="text" id="nameAr" required></div>
+            <div><label id="lblNameEn">Name (English)</label><input type="text" id="nameEn" dir="ltr" required></div>
+        </div>
+
+        <div id="companionFields" style="display:none; background:#fef9e7; padding:12px; border-radius:8px; border:1px dashed #d4a017; margin-bottom:10px;">
+            <div class="grid">
+                <div><label>اسم المرافق (عربي)</label><input type="text" id="companionAr"></div>
+                <div><label>Companion Name (English)</label><input type="text" id="companionEn" dir="ltr"></div>
+            </div>
+            <div class="grid">
+                <div><label>صلة القرابة (عربي)</label>
+                    <select id="relationAr">
+                        <option value="أب">الأب</option>
+                        <option value="أم">الأم</option>
+                        <option value="الابن">الابن</option>
+                        <option value="الابنة">الابنة</option>
+                        <option value="زوج">الزوج</option>
+                        <option value="زوجة">الزوجة</option>
+                        <option value="أخ">الأخ</option>
+                        <option value="أخت">الأخت</option>
+                    </select>
+                </div>
+                <div><label>Relationship (English)</label>
+                    <select id="relationEn">
+                        <option value="Father">Father</option>
+                        <option value="Mother">Mother</option>
+                        <option value="Son">Son</option>
+                        <option value="Daughter">Daughter</option>
+                        <option value="Husband">Husband</option>
+                        <option value="Wife">Wife</option>
+                        <option value="Brother">Brother</option>
+                        <option value="Sister">Sister</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div><label>تاريخ الدخول (ميلادي)</label><input type="date" id="dIn" onchange="calc()"></div>
+            <div><label>تاريخ الدخول (هجري - قابل للتعديل)</label><input type="text" id="dInHij" class="hijri-input"></div>
+        </div>
+        <div class="grid">
+            <div><label>تاريخ الخروج (ميلادي)</label><input type="date" id="dOut" onchange="calc()"></div>
+            <div><label>تاريخ الخروج (هجري - قابل للتعديل)</label><input type="text" id="dOutHij" class="hijri-input"></div>
+        </div>
+        <div class="grid">
+            <div><label>تاريخ الإصدار</label><input type="date" id="dIss"></div>
+            <div><label>المدة (أيام)</label><input type="text" id="dur" readonly style="background:#f9f9f9;"></div>
+        </div>
+        <div class="grid">
+            <div><label>جهة العمل (عربي)</label><input type="text" id="empAr" value="الى من يهمه الأمر"></div>
+            <div><label>Employer (English)</label><input type="text" id="empEn" value=" " dir="ltr"></div>
+        </div>
+
+        <div class="sh">بيانات المنشأة (متقدم)</div>
+        <div style="margin-bottom:15px;">
+            <label>رابط شعار المنشأة الخاص (اختياري)</label>
+            <input type="text" id="customLogo" placeholder="ضع رابط شعار المستشفى هنا..">
+        </div>
+
+        <div class="grid">
+            <div><label>اسم المنشأة (عربي)</label><input type="text" id="hospAr" required></div>
+            <div><label>Hospital (English)</label><input type="text" id="hospEn" dir="ltr" required></div>
+        </div>
+        <div class="grid">
+            <div><label>اسم الممارس (عربي)</label><input type="text" id="docAr" required></div>
+            <div><label>Practitioner (English)</label><input type="text" id="docEn" dir="ltr" required></div>
+        </div>
+        <div class="grid">
+            <div><label>المسمى الوظيفي (عربي)</label><input type="text" id="jobAr" required></div>
+            <div><label>Position (English)</label><input type="text" id="jobEn" dir="ltr" required></div>
+        </div>
+        <input type="hidden" id="resID">
+
+        <button type="button" class="btn-gen" onclick="printReport()">توليد التقرير النهائي</button>
+    </form>
 </div>
 
 <script>
-    // Helper functions and form logic remain the same (omitted here for brevity in this commit exercise)
+    // helper functions omitted earlier (fmtTime12, formatDD, waitArabic, calc, initFilters, updateFilters, applyDoctorData) are assumed unchanged and present earlier in original code.
 
-    function getVal(id){ return document.getElementById(id).value || ''; }
+    function switchType(){
+        const isComp = document.querySelector('input[name="reportType"]:checked').value === 'companion';
+        document.getElementById('companionFields').style.display = isComp ? 'block' : 'none';
+        document.getElementById('patientNameRow').style.display = isComp ? 'none' : 'grid';
+    }
+
+    function getVal(id){
+        const el = document.getElementById(id);
+        return el ? (el.value || '') : '';
+    }
 
     function printReport(){
-        // gather values as before
         const isCompanion = document.querySelector('input[name="reportType"]:checked').value === 'companion';
         const logoUrl = getVal('customLogo') || "https://i.postimg.cc/Jz1sqJ6J/Saudi-Ministry-of-Health-Logo-svg.png";
+        const dInVal = getVal('dIn');
+        const dOutVal = getVal('dOut');
+        const printDT = new Date(getVal('printDateTime'));
+        const strTime = (()=>{var h=printDT.getHours(),m=printDT.getMinutes(),ampm=h>=12?'PM':'AM';h=h%12||12;return (h<10?'0'+h:h)+':'+(m<10?'0'+m:m)+' '+ampm})();
+        const dateNow = printDT.toLocaleDateString('en-GB', {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'});
 
-        // Build a standalone print HTML and include the same @font-face + preload to ensure fonts are available in the print renderer
-        const printHtml = `<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="font" href="https://fonts.gstatic.com/s/notosansarabic/v22/AlZy_zVFtYP12Zncg2kRcQd3Vw.woff2" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="https://fonts.gstatic.com/s/notosansarabic/v34/AlZy_zVFtYP12NTMd7xy42eAoq2v9MydyA.woff2" type="font/woff2" crossorigin>
-<style>
-@font-face{font-family:'Noto Sans Arabic';font-weight:400;font-style:normal;src:url('https://fonts.gstatic.com/s/notosansarabic/v22/AlZy_zVFtYP12Zncg2kRcQd3Vw.woff2') format('woff2');font-display:block}
-@font-face{font-family:'Noto Sans Arabic';font-weight:700;font-style:normal;src:url('https://fonts.gstatic.com/s/notosansarabic/v34/AlZy_zVFtYP12NTMd7xy42eAoq2v9MydyA.woff2') format('woff2');font-display:block}
-body{font-family:'Noto Sans Arabic',sans-serif !important;direction:rtl;padding:50px 60px;margin:0;-webkit-font-smoothing:antialiased;}
-/* preserve main print styles (table, headers, etc.) — keep same visual as local version */
-table{width:100%;border-collapse:collapse;margin:25px 0;border:2px solid #1e4a7a}
-td{border:1px solid #1e4a7a;padding:14px;text-align:center;font-size:16px;vertical-align:middle}
-.ar-label{font-weight:bold;color:#1e4a7a;background-color:#f0f5ff}
-.data-cell{font-family:'Noto Sans Arabic', 'Times New Roman', serif}
-@media print{@page{size:A3;margin:0}body{padding:40px 50px}}
-</style>
-</head>
-<body>
-<!-- reproduce the printed content here using values from the main window -->
-<div style="text-align:center;margin-bottom:20px;">
-    <h1 style="color:#1e4a7a;margin:0">${isCompanion ? 'تقرير مرافقة مريض' : 'تقرير إجازة مرضية'}</h1>
-</div>
-<!-- simplified: table with main fields (full detailed table can be reproduced as in original file) -->
-<table>
-<tr><td class="ar-label">رمز الإجازة</td><td class="data-cell">${getVal('serviceCode')}</td></tr>
-<tr><td class="ar-label">الاسم</td><td class="data-cell">${getVal('nameAr')}</td></tr>
-<tr><td class="ar-label">رقم الهوية</td><td class="data-cell">${getVal('natID')}</td></tr>
-<tr><td class="ar-label">جهة العمل</td><td class="data-cell">${getVal('empAr')}</td></tr>
-</table>
-<div style="margin-top:30px;text-align:center;"><img src="${logoUrl}" height="120" style="width:auto"></div>
-</body>
-</html>`;
+        let win = window.open('', '_blank');
+        let c = '<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">';
+        c += '<link rel="preload" href="/fonts/NotoSansArabic-Regular.woff2" as="font" type="font/woff2" crossorigin>';
+        c += '<link rel="preload" href="/fonts/NotoSansArabic-Bold.woff2" as="font" type="font/woff2" crossorigin>';
+        c += '<style>@font-face{font-family:"Noto Sans Arabic";font-style:normal;font-weight:400;src:url("/fonts/NotoSansArabic-Regular.woff2") format("woff2");font-display:block}@font-face{font-family:"Noto Sans Arabic";font-style:normal;font-weight:700;src:url("/fonts/NotoSansArabic-Bold.woff2") format("woff2");font-display:block}body{font-family:"Noto Sans Arabic",sans-serif!important;direction:rtl;padding:50px 60px;margin:0}table{width:100%;border-collapse:collapse;margin:25px 0;border:1px solid #d4d4d4}td{border:1px solid #d4d4d4;padding:12px;text-align:center;font-size:16px} .ar-label{font-weight:bold;color:#366fb5!important}.data-cell{color:#2c3e77!important} .blue{background-color:#2c3e77!important;color:#ffffff!important}.gray{background-color:#f5f5f5!important}.date-fix{direction:ltr!important;unicode-bidi:bidi-override!important;display:inline-block;font-family:"Times New Roman",serif!important;font-weight:700!important}</style></head><body onload="window.print()">';
 
-        const w = window.open('', '_blank');
-        w.document.open();
-        w.document.write(printHtml);
-        w.document.close();
-        // Delay slightly to allow font preload to fetch before print dialog
-        setTimeout(() => { try { w.focus(); w.print(); } catch(e) { console.warn('print failed', e); } }, 800);
+        const title = isCompanion ? 'تقرير مرافقة مريض' : 'تقرير إجازة مرضية';
+        c += '<div style="text-align:center;margin-bottom:20px;"><h1 style="color:#1e4a7a;margin:0">'+title+'</h1></div>';
+
+        c += '<table>';
+        // For both types, first show Leave ID and duration if available
+        c += '<tr><td class="ar-label">رمز الإجازة</td><td class="data-cell">'+getVal('serviceCode')+'</td></tr>';
+        c += '<tr><td class="ar-label">مدة الإجازة</td><td class="data-cell">'+getVal('dur')+'</td></tr>';
+        c += '<tr><td class="ar-label">تاريخ الدخول</td><td class="data-cell"><span class="date-fix">'+getVal('dInHij')+'</span> - '+(getVal('dIn')||'')+'</td></tr>';
+        c += '<tr><td class="ar-label">تاريخ الخروج</td><td class="data-cell"><span class="date-fix">'+getVal('dOutHij')+'</span> - '+(getVal('dOut')||'')+'</td></tr>';
+        c += '<tr><td class="ar-label">تاريخ إصدار التقرير</td><td class="data-cell"><span class="date-fix">'+getVal('dIss')+'</span></td></tr>';
+
+        if(isCompanion){
+            // Companion specific order: companion name after issue date
+            c += '<tr class="gray"><td class="ar-label">اسم المرافق</td><td style="color:#2c3e77;">'+getVal('companionAr')+'<br><span style="font-family:\'Times New Roman\';display:block;">'+(getVal('companionEn')||'').toUpperCase()+'</span></td></tr>';
+            c += '<tr><td class="ar-label">رقم الهوية / الإقامة</td><td class="data-cell">'+getVal('natID')+'</td></tr>';
+            c += '<tr class="gray"><td class="ar-label">الجنسية</td><td style="color:#2c3e77;">'+getVal('nationAr')+'</td></tr>';
+            c += '<tr><td class="ar-label">صلة القرابة</td><td class="data-cell">'+getVal('relationAr')+'</td></tr>';
+            c += '<tr class="gray"><td class="ar-label">جهة العمل</td><td style="color:#2c3e77;">'+getVal('empAr')+'</td></tr>';
+            // Practitioner
+            c += '<tr><td class="ar-label">اسم الممارس</td><td class="data-cell">'+getVal('docAr')+'<br><span style="font-family:\'Times New Roman\';display:block;">'+(getVal('docEn')||'').toUpperCase()+'</span></td></tr>';
+            c += '<tr class="gray"><td class="ar-label">المسمى الوظيفي</td><td class="data-cell">'+getVal('jobAr')+'<br><span style="font-family:\'Times New Roman\';display:block;">'+(getVal('jobEn')||'').toUpperCase()+'</span></td></tr>';
+        } else {
+            // Sick leave: include patient name, national id, nationality, employer, practitioner, job
+            c += '<tr class="gray"><td class="ar-label">الاسم</td><td style="color:#2c3e77;">'+getVal('nameAr')+'<br><span style="font-family:\'Times New Roman\';display:block;">'+(getVal('nameEn')||'').toUpperCase()+'</span></td></tr>';
+            c += '<tr><td class="ar-label">رقم الهوية / الإقامة</td><td class="data-cell">'+getVal('natID')+'</td></tr>';
+            c += '<tr class="gray"><td class="ar-label">الجنسية</td><td style="color:#2c3e77;">'+getVal('nationAr')+'</td></tr>';
+            c += '<tr><td class="ar-label">جهة العمل</td><td class="data-cell">'+getVal('empAr')+'<br><span style="font-family:\'Times New Roman\';display:block;">'+(getVal('empEn')||'').toUpperCase()+'</span></td></tr>';
+            c += '<tr class="gray"><td class="ar-label">اسم الممارس</td><td style="color:#2c3e77;">'+getVal('docAr')+'<br><span style="font-family:\'Times New Roman\';display:block;">'+(getVal('docEn')||'').toUpperCase()+'</span></td></tr>';
+            c += '<tr><td class="ar-label">المسمى الوظيفي</td><td class="data-cell">'+getVal('jobAr')+'<br><span style="font-family:\'Times New Roman\';display:block;">'+(getVal('jobEn')||'').toUpperCase()+'</span></td></tr>';
+        }
+
+        c += '</table>';
+
+        c += '<div style="margin-top:30px;text-align:center;"><img src="'+logoUrl+'" height="120" style="width:auto"></div>';
+        c += '<div style="margin-top:10px;text-align:center;font-size:13px;">'+strTime+' - '+dateNow+'</div>';
+
+        c += '</body></html>';
+
+        win.document.open();
+        win.document.write(c);
+        win.document.close();
     }
+
+    window.onload = function() {
+        // ensure switching displays correct fields
+        switchType();
+        // initFilters(); updateFilters(); -- assuming these functions exist elsewhere in script
+        const now = new Date();
+        const date = now.toISOString().split('T')[0];
+        const time = now.toTimeString().split(' ')[0].substring(0, 5);
+        const el = document.getElementById("printDateTime");
+        if(el) el.value = `${date}T${time}`;
+    };
 </script>
 
 </body>
