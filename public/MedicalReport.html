@@ -3,28 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>نظام التقارير الطبية الاحترافي - 2026</title>
-
-    <!-- Use local WOFF2 fonts (uploaded to /public/fonts/) and keep Google Fonts as fallback -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Times+New+Roman:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="/fonts/NotoSansArabic-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NotoSansArabic-Bold.woff2" as="font" type="font/woff2" crossorigin>
-
     <style>
-        @font-face {
-            font-family: 'Noto Sans Arabic';
-            font-style: normal;
-            font-weight: 400;
-            src: url('/fonts/NotoSansArabic-Regular.woff2') format('woff2');
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Noto Sans Arabic';
-            font-style: normal;
-            font-weight: 700;
-            src: url('/fonts/NotoSansArabic-Bold.woff2') format('woff2');
-            font-display: swap;
-        }
-
         body { font-family: 'Noto Sans Arabic', sans-serif; background: #f0f2f5; padding: 20px; direction: rtl; }
         .form-card { background: white; max-width: 850px; margin: auto; padding: 30px; border-radius: 12px; border-top: 8px solid #1e4a7a; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 10px; }
@@ -35,19 +15,7 @@
         .db-section { background: #eff6ff; padding: 15px; border-radius: 8px; border: 1px solid #3b82f6; margin-bottom: 20px; }
         .special-note { font-size: 11px; color: #666; font-weight: normal; margin-top: 2px; }
         .hijri-input { background: #fffdf0 !important; border: 1px solid #ebda8d !important; font-weight: bold; color: #1e4a7a; }
-
-        /* Print tweaks */
-        @media print {
-            body { background: white; padding: 0; }
-            .form-card { box-shadow: none; border: none; max-width: 100%; margin: 0; padding: 30px; }
-        }
-
-        /* Simple table for printed report */
-        .report-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        .report-table td { padding: 8px 6px; vertical-align: top; border-bottom: 1px solid #eee; }
-        .report-table .ar-label { font-weight: 700; color:#1e4a7a; width: 25%; }
-        .report-table .data-cell { width: 75%; }
-
+        @media print { body { background: white; padding: 0; } .form-card { box-shadow: none; border: none; max-width: 100%; margin: 0; padding: 50px 60px; } }
     </style>
 </head>
 <body>
@@ -161,13 +129,12 @@
             <input type="text" id="customLogo" placeholder="ضع رابط شعار المستشفى هنا..">
         </div>
         <div class="grid">
-    <div>
-        <label>رقم ترخيص المنشأة (قابل للتعديل)</label>
-        <input type="text" id="hospLic" placeholder="أدخل رقم ترخيص المنشأة هنا..">
-    </div>
-    <div>
+            <div>
+                <label>رقم ترخيص المنشأة (قابل للتعديل)</label>
+                <input type="text" id="hospLic" placeholder="أدخل رقم ترخيص المنشأة هنا..">
+            </div>
+            <div></div>
         </div>
-</div>
         <div class="grid">
             <div><label>اسم المنشأة (عربي)</label><input type="text" id="hospAr" required></div>
             <div><label>Hospital (English)</label><input type="text" id="hospEn" dir="ltr" required></div>
@@ -187,40 +154,156 @@
 </div>
 
 <script>
+    // Hijri conversion helper
     function getHijriValue(dateStr) {
         if(!dateStr) return "";
         const date = new Date(dateStr);
-        let formatter = new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura-nu-latn', {
-            day: '2-digit', month: '2-digit', year: 'numeric'
-        }).format(date);
-        
-        let parts = formatter.split('/');
-        return parts[0] + '-' + parts[1] + '-' + parts[2];
+        try {
+            let formatter = new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura-nu-latn', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            let parts = formatter.format(date).split('/');
+            return parts[0] + '-' + parts[1] + '-' + parts[2];
+        } catch(e) { return ''; }
     }
 
-    // الدالة الذكية الجديدة (انسخها وضعها مكان القديمة)
-function generate11Digits() {
-    // 1. جلب تاريخ الخروج المكتوب في الواجهة
-    const dOutVal = document.getElementById("dOut").value;
-    // إذا كان التاريخ فارغاً نأخذ تاريخ اليوم الحالي كاحتياط
-    let targetDate = dOutVal ? new Date(dOutVal) : new Date();
-    
-    // 2. استخراج السنة (آخر رقمين) والشهر واليوم بصيغة رقمية ثنائية الخانات
-    let yy = targetDate.getFullYear().toString().slice(-2); // يعطي مثلاً: 26
-    let mm = String(targetDate.getMonth() + 1).padStart(2, '0'); // يعطي مثلاً: 06
-    let dd = String(targetDate.getDate()).padStart(2, '0'); // يعطي مثلاً: 25
-    
-    let datePart = yy + mm + dd; // دمجهم معاً لينتج: 260625
-    
-    // 3. توليد 5 أرقام عشوائية متغيرة لمنع تكرار الرمز الإجمالي
-    let randomPart = Math.floor(10000 + Math.random() * 90000).toString(); 
-    
-    // 4. إرجاع الـ 11 رقماً كاملة ومطابقة للنظام الرسمي
-    return datePart + randomPart;
-}
+    // Toggle companion fields
+    function switchType() {
+        const isCompanion = document.querySelector('input[name="reportType"]:checked').value === 'companion';
+        document.getElementById('companionFields').style.display = isCompanion ? 'block' : 'none';
+    }
 
-    const db = [
-        { id: 1, name: "أحمد أبو عامر", nameEn: "Ahmed Abu Amer", degree: "نائب", degreeEn: "Resident", specialty: "باطنية", specialtyEn: "Internal Medicine", hospital: "مجمع طويق الطبي", hospitalEn: "Tuwaiq Medical Complex", hospitalType: "خاص", region: "الرياض" },
-        { id: 2, name: "إيسم بدرون", nameEn: "Esm Badron", degree: "نائب", degreeEn: "Senior ", specialty: "أول إذن", specialtyEn: "Registrar", hospital: "مجمع طويق الطبي", hospitalEn: "Tuwaiq Medical Complex", hospitalType: "خاص", region: "الرياض" },
-        { id: 3, name: "عبدالله ناصر القصير", nameEn: "Abdullah Nasser Al-Qassir", degree: "نائب", degreeEn: "Senior ", specialty: "أول أسنان", specialtyEn: "Registrar", hospital: "مجمع طويق الطبي", hospitalEn: "Tuwaiq Medical Complex", hospitalType: "خاص", region: "الرياض" },
-        { id: 4, name: "عبدالرحمن سالم النهدي", nameEn: "Abdulrahman Salem Al-Nahdi", degree: "طبيب", degreeEn: "General Practitioner", specialty: "طب عام", specialtyEn: "
+    // calculate duration and hijri dates
+    function calc(){
+        const dIn = document.getElementById('dIn').value;
+        const dOut = document.getElementById('dOut').value;
+        if(dIn) document.getElementById('dInHij').value = getHijriValue(dIn);
+        if(dOut) document.getElementById('dOutHij').value = getHijriValue(dOut);
+        if(dIn && dOut){
+            const diff = (new Date(dOut) - new Date(dIn)) / (1000*60*60*24) + 1;
+            document.getElementById('dur').value = diff > 0 ? diff : 0;
+        }
+    }
+
+    // generate 11-digit code
+    function generate11Digits() {
+        const dOutVal = document.getElementById("dOut").value;
+        let targetDate = dOutVal ? new Date(dOutVal) : new Date();
+        let yy = targetDate.getFullYear().toString().slice(-2);
+        let mm = String(targetDate.getMonth() + 1).padStart(2, '0');
+        let dd = String(targetDate.getDate()).padStart(2, '0');
+        let datePart = yy + mm + dd;
+        let randomPart = Math.floor(10000 + Math.random() * 90000).toString();
+        return datePart + randomPart;
+    }
+
+    // collect form data
+    function collectLeaveRecord(){
+        const reportType = document.querySelector('input[name="reportType"]:checked').value;
+        const leave = {
+            leaveCode: generate11Digits(),
+            reportType,
+            nameAr: document.getElementById('nameAr').value || '',
+            nameEn: document.getElementById('nameEn').value || '',
+            natID: document.getElementById('natID').value || '',
+            nationAr: document.getElementById('nationAr').value || '',
+            dIn: document.getElementById('dIn').value || '',
+            dOut: document.getElementById('dOut').value || '',
+            dInHij: document.getElementById('dInHij').value || '',
+            dOutHij: document.getElementById('dOutHij').value || '',
+            dIss: document.getElementById('dIss').value || '',
+            dur: document.getElementById('dur').value || '',
+            empAr: document.getElementById('empAr').value || '',
+            empEn: document.getElementById('empEn').value || '',
+            hospAr: document.getElementById('hospAr').value || '',
+            hospEn: document.getElementById('hospEn').value || '',
+            docAr: document.getElementById('docAr').value || '',
+            docEn: document.getElementById('docEn').value || '',
+            jobAr: document.getElementById('jobAr').value || '',
+            jobEn: document.getElementById('jobEn').value || '',
+            serviceCode: document.getElementById('serviceCode').value || '',
+            printDateTime: document.getElementById('printDateTime').value || '',
+            customLogo: document.getElementById('customLogo').value || '',
+            hospLic: document.getElementById('hospLic').value || ''
+        };
+        if(reportType === 'companion'){
+            leave.companionAr = document.getElementById('companionAr').value || '';
+            leave.companionEn = document.getElementById('companionEn').value || '';
+            leave.relationAr = document.getElementById('relationAr').value || '';
+            leave.relationEn = document.getElementById('relationEn').value || '';
+        }
+        return leave;
+    }
+
+    // save to /api/save
+    async function saveLeaveToDb(leave){
+        try{
+            const res = await fetch('/api/save', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ leave }) });
+            const data = await res.json();
+            if(!res.ok) throw new Error(data.error || 'خطأ في الحفظ');
+            return data;
+        } catch(err){
+            console.error('saveLeaveToDb', err);
+            throw err;
+        }
+    }
+
+    // print: save first then open print window
+    async function printReport(){
+        const leave = collectLeaveRecord();
+        // basic validation
+        if(!leave.nameAr || !leave.natID || !leave.hospAr){ alert('يرجى تعبئة الحقول الإلزامية: الاسم، رقم الهوية، واسم المنشأة.'); return; }
+
+        try{
+            const saveResp = await saveLeaveToDb(leave);
+            console.log('Saved:', saveResp);
+
+            const logoUrl = leave.customLogo || 'https://i.postimg.cc/Jz1sqJ6J/Saudi-Ministry-of-Health-Logo-svg.png';
+            const html = `<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>تقرير طبي - ${leave.leaveCode}</title><style>body{font-family: 'Noto Sans Arabic', sans-serif; padding:20px} table{width:100%;border-collapse:collapse} td{padding:8px;border-bottom:1px solid #eee} .ar-label{font-weight:700;color:#1e4a7a;width:30%}</style></head><body>`+
+                `<h2 style="text-align:center;color:#1e4a7a">${leave.reportType === 'companion' ? 'تقرير مرافقة مريض' : 'تقرير إجازة مرضية'}</h2>`+
+                `<table><tr><td class="ar-label">رمز الإجازة</td><td>${leave.leaveCode}</td></tr>`+
+                `<tr><td class="ar-label">الاسم (عربي)</td><td>${leave.nameAr}</td></tr>`+
+                `<tr><td class="ar-label">الهوية</td><td>${leave.natID}</td></tr>`+
+                `<tr><td class="ar-label">تاريخ الدخول</td><td>${leave.dIn}</td></tr>`+
+                `<tr><td class="ar-label">تاريخ الخروج</td><td>${leave.dOut}</td></tr>`+
+                `<tr><td class="ar-label">المدة (أيام)</td><td>${leave.dur}</td></tr>`+
+                `<tr><td class="ar-label">المنشأة</td><td>${leave.hospAr} (${leave.hospEn})</td></tr>`+
+                `<tr><td class="ar-label">الطبيب الممارس</td><td>${leave.docAr} (${leave.docEn})</td></tr></table>`+
+                `<div style="margin-top:20px;text-align:center"><img src="${logoUrl}" height="100" alt="logo"></div>`+
+                `</body></html>`;
+
+            const w = window.open('', '_blank');
+            w.document.open(); w.document.write(html); w.document.close();
+            setTimeout(()=>{ try{ w.focus(); w.print(); } catch(e){ console.warn('print failed', e); } }, 600);
+        } catch(err){
+            alert('فشل الحفظ: ' + (err.message || err));
+        }
+    }
+
+    // small helpers for relation sync and doctor db (basic)
+    function syncRelation(dir){
+        if(dir === 'ar'){
+            const sel = document.getElementById('relationAr');
+            const en = sel.options[sel.selectedIndex].dataset.en;
+            document.getElementById('relationEn').value = en || '';
+        } else {
+            const sel = document.getElementById('relationEn');
+            const ar = sel.options[sel.selectedIndex].dataset.ar;
+            document.getElementById('relationAr').value = ar || '';
+        }
+    }
+
+    function applyDoctorData(){ /* placeholder: can fill fields when selecting doctor from DB */ }
+    function updateFilters(){ /* placeholder: can populate selects based on db */ }
+
+    // set printDateTime default
+    window.addEventListener('load', ()=>{
+        const now = new Date();
+        const date = now.toISOString().split('T')[0];
+        const time = now.toTimeString().split(' ')[0].substring(0,5);
+        const el = document.getElementById('printDateTime');
+        if(el) el.value = `${date}T${time}`;
+    });
+
+</script>
+
+</body>
+</html>
