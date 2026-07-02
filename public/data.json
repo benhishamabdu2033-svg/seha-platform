@@ -348,6 +348,20 @@
       "jobTitle": "أخصائي باطنية",
       "issueDate": "2026-07-07",
       "leaveType": "مرافق"
+    },
+    {
+      "leaveCode": "PSL43378889170",
+      "serviceCode": "PSL43378889170",
+      "nationalId": "1131353255",
+      "idNumber": "1131353255",
+      "name": "مازن بن عبدالجليل بن أحمد الزاير",
+      "admissionDate": "2026-07-01",
+      "dischargeDate": "2026-07-05",
+      "leaveDuration": "5",
+      "doctorName": "ماجد باجنيد",
+      "jobTitle": "أخصائي باطنية",
+      "issueDate": "2026-07-05",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
