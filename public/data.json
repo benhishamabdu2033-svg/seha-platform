@@ -376,6 +376,20 @@
       "jobTitle": "أخصائية طب العائلة",
       "issueDate": "2026-07-05",
       "leaveType": "مرافق"
+    },
+    {
+      "leaveCode": "GSL26070333108",
+      "serviceCode": "GSL26070333108",
+      "nationalId": "1232345554",
+      "idNumber": "1232345554",
+      "name": "مسفر العتيبي ",
+      "admissionDate": "2026-07-02",
+      "dischargeDate": "2026-07-06",
+      "leaveDuration": "5",
+      "doctorName": "أحمد أبو عامر",
+      "jobTitle": "نائب باطنية",
+      "issueDate": "2026-07-06",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
