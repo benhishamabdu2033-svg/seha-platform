@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>نظام التقارير الطبية الاحترافي - 2026</title>
+
+    <!-- Preload local fonts served from /fonts/ -->
     <link rel="preload" href="/fonts/NotoSansArabic-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/NotoSansArabic-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Times+New+Roman:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
+        /* Local @font-face to ensure reliable Arabic rendering (used by the page and included in the print HTML) */
         @font-face{
             font-family: 'Noto Sans Arabic';
             src: url('/fonts/NotoSansArabic-Regular.woff2') format('woff2');
@@ -21,6 +24,7 @@
             font-style: normal;
             font-display: swap;
         }
+
         body { font-family: 'Noto Sans Arabic', sans-serif; background: #f0f2f5; padding: 20px; direction: rtl; }
         .form-card { background: white; max-width: 850px; margin: auto; padding: 30px; border-radius: 12px; border-top: 8px solid #1e4a7a; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 10px; }
@@ -46,8 +50,7 @@
             <input type="radio" name="reportType" value="companion" onchange="switchType()"> تقرير مرافقة مريض
         </label>
     </div>
-    
-    
+
     <div class="db-section">
         <div class="sh" style="margin-top:0;">البحث السريع في قاعدة البيانات</div>
         <div class="grid">
@@ -132,7 +135,7 @@
         </div>
         <div class="grid">
             <div><label>تاريخ الإصدار</label><input type="date" id="dIss"></div>
-            <div><label>المدة (��يام)</label><input type="text" id="dur" readonly style="background:#f9f9f9;"></div>
+            <div><label>المدة (أيام)</label><input type="text" id="dur" readonly style="background:#f9f9f9;"></div>
         </div>
         <div class="grid">
             <div><label>جهة العمل (عربي)</label><input type="text" id="empAr" value="الى من يهمه الأمر"></div>
@@ -182,32 +185,23 @@
         return parts[0] + '-' + parts[1] + '-' + parts[2];
     }
 
-    // الدالة الذكية الجديدة (انسخها وضعها مكان القديمة)
-function generate11Digits() {
-    // 1. جلب تاريخ الخروج المكتوب في الواجهة
-    const dOutVal = document.getElementById("dOut").value;
-    // إذا كان التاريخ فارغاً نأخذ تاريخ اليوم الحالي كاحتياط
-    let targetDate = dOutVal ? new Date(dOutVal) : new Date();
-    
-    // 2. استخراج السنة (آخر رقمين) والشهر واليوم بصيغة رقمية ثنائية الخانات
-    let yy = targetDate.getFullYear().toString().slice(-2); // يعطي مثلاً: 26
-    let mm = String(targetDate.getMonth() + 1).padStart(2, '0'); // يعطي مثلاً: 06
-    let dd = String(targetDate.getDate()).padStart(2, '0'); // يعطي مثلاً: 25
-    
-    let datePart = yy + mm + dd; // دمجهم معاً لينتج: 260625
-    
-    // 3. توليد 5 أرقام عشوائية متغيرة لمنع تكرار الرمز الإجمالي
-    let randomPart = Math.floor(10000 + Math.random() * 90000).toString(); 
-    
-    // 4. إرجاع الـ 11 رقماً كاملة ومطابقة للنظام الرسمي
-    return datePart + randomPart;
-}
+    function generate11Digits() {
+        const dOutVal = document.getElementById("dOut").value;
+        let targetDate = dOutVal ? new Date(dOutVal) : new Date();
+        let yy = targetDate.getFullYear().toString().slice(-2);
+        let mm = String(targetDate.getMonth() + 1).padStart(2, '0');
+        let dd = String(targetDate.getDate()).padStart(2, '0');
+        let datePart = yy + mm + dd;
+        let randomPart = Math.floor(10000 + Math.random() * 90000).toString();
+        return datePart + randomPart;
+    }
 
+    // --- simplified/representative db (full data kept in repository) ---
     const db = [
-    { id: 1, name: "أحمد أبو عامر", nameEn: "Ahmed Abu Amer", degree: "نائب", degreeEn: "Resident", specialty: "باطنية", specialtyEn: "Internal Medicine", hospital: "مجمع"},
-    { id: 2, name: "إيسم بدرون", nameEn: "Esm Badron", degree: "نائب", degreeEn: "Senior ", specialty: "أول إذن", specialtyEn: "Registrar", hospital: "مجمع"},
-    // ... بقية البيانات موجودة كما في الملف الأصلي (تم الاقتصار هنا للوضوح)
-  ];  
+      { id: 1, name: "أحمد أبو عامر", nameEn: "Ahmed Abu Amer", degree: "نائب", degreeEn: "Resident", specialty: "باطنية", specialtyEn: "Internal Medicine", hospital: "مجمع"},
+      { id: 2, name: "إيسم بدرون", nameEn: "Esm Badron", degree: "نائب", degreeEn: "Senior ", specialty: "أول إذن", specialtyEn: "Registrar", hospital: "مجمع"}
+      // ... بقية السجلات (الملف الأصلي يحتوي على القائمة الكاملة)
+    ];
 
     function initFilters() {
         const regions = [...new Set(db.map(d => d.region))].filter(Boolean).sort();
@@ -245,20 +239,20 @@ function generate11Digits() {
         const id = document.getElementById('selDoctor').value;
         if(!id) return;
         const doctor = db.find(x => x.id == id);
-        document.getElementById('hospAr').value = doctor.hospital;
+        if(!doctor) return;
+        document.getElementById('hospAr').value = doctor.hospital || '';
         document.getElementById('hospEn').value = doctor.hospitalEn || '';
-        document.getElementById('docAr').value = doctor.name;
+        document.getElementById('docAr').value = doctor.name || '';
         document.getElementById('docEn').value = (doctor.nameEn || '').toUpperCase();
-        document.getElementById('jobAr').value = doctor.degree + " " + doctor.specialty;
-        document.getElementById('jobEn').value = doctor.degreeEn + " " + doctor.specialtyEn;
-        
+        document.getElementById('jobAr').value = (doctor.degree || '') + " " + (doctor.specialty || '');
+        document.getElementById('jobEn').value = (doctor.degreeEn || '') + " " + (doctor.specialtyEn || '');
+
         const prefix = (doctor.hospitalType === "خاص") ? "PSL" : "GSL";
         const generatedCode = prefix + generate11Digits();
         document.getElementById("serviceCode").value = generatedCode;
         document.getElementById('resID').value = generatedCode;
-        // التعديل الجديد: جلب شعار المنشأة تلقائياً من قاعدة البيانات للمستشفى الخاص
-document.getElementById('customLogo').value = doctor.hospitalLogo || "";
-document.getElementById('hospLic').value = doctor.hospitalLic || "";
+        document.getElementById('customLogo').value = doctor.hospitalLogo || "";
+        document.getElementById('hospLic').value = doctor.hospitalLic || "";
     }
 
     function calc() {
@@ -303,7 +297,6 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
         document.getElementById('lblNameEn').textContent = isComp ? 'Companion Name (English)' : 'Name (English)';
     }
 
-    // مزامنة صلة القرابة تلقائياً بين العربي والإنجليزي
     function syncRelation(src) {
         const arSel = document.getElementById('relationAr');
         const enSel = document.getElementById('relationEn');
@@ -347,59 +340,51 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
         const isCompanion = getReportType() === 'companion';
         const logoUrl = getVal('customLogo') || "https://i.postimg.cc/Jz1sqJ6J/Saudi-Ministry-of-Health-Logo-svg.png";
 
-
         const printDT = new Date(getVal('printDateTime'));
         var h = printDT.getHours(), m = printDT.getMinutes();
         var ampm = h >= 12 ? 'PM' : 'AM';
         h = h % 12 || 12;
         var strTime = (h < 10 ? '0'+h : h) + ':' + (m < 10 ? '0'+m : m) + ' ' + ampm;
-        var dateNow = printDT.toLocaleDateString('en-GB', {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'});
 
         var win = window.open('', '_blank');
         var c = '<html><head><meta charset="utf-8">';
-        // embed local fonts for the print window (absolute path) and preload
+
+        // include local font-face in print HTML (makes print window independent)
         c += '<style>';
         c += "@font-face{font-family:'Noto Sans Arabic';src:url('/fonts/NotoSansArabic-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}";
         c += "@font-face{font-family:'Noto Sans Arabic';src:url('/fonts/NotoSansArabic-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}";
+
         c += 'body { margin: 0; padding: 50px 60px; font-family: "Noto Sans Arabic", serif; direction: rtl; -webkit-print-color-adjust: exact; print-color-adjust: exact; }';
         c += '.header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: start; margin-bottom: 30px; }';
         c += '.h-center { text-align: center; } .h-center img { width: 220px; margin-top: 25px; }';
         c += '.t-ar { color: #306db5 !important; font-size: 28px; font-weight: 700; margin-top: 18px;} .t-en { color: #2c3e77 !important; font-size: 22px; font-weight: 700; font-family: "Times New Roman", serif !important; }';
         c += 'table { width: 100%; border-collapse: collapse; margin: 25px 0; border: 1px solid #d4d4d4; table-layout: fixed; }';
         c += 'td { border: 1px solid #d4d4d4; padding: 12px; text-align: center; font-size: 16px; height: 48px; }';
-        c += '.ar-label { font-weight: bold; color: #366fb5 !important; } .en-label { font-family: "Times New Roman", serif !important; color: #366fb5 !important; font-weight: bold; }'; 
-        c += '.data-cell { color: #2c3e77 !important; font-family: "Times New Roman", serif !important; font-weight: normal; }'; 
+        c += '.ar-label { font-weight: bold; color: #366fb5 !important; } .en-label { font-family: "Times New Roman", serif !important; color: #366fb5 !important; font-weight: bold; }';
+        c += '.data-cell { color: #2c3e77 !important; font-family: "Times New Roman", serif !important; font-weight: normal; }';
         c += '.date-fix { direction: ltr !important; unicode-bidi: bidi-override !important; display: inline-block; font-family: "Times New Roman", serif !important; color: inherit; font-weight: normal; }';
         c += '.blue { background-color: #1e4a7a !important; color: white !important; } .blue td { color: white !important; }';
         c += '.gray { background-color: #f5f5f5 !important; }';
         c += '.btm { display: flex; justify-content: space-between; margin-top: 40px; align-items: flex-start; }';
         c += '.btm-right { width: 48%; padding-right: 15px; display: flex; flex-direction: column; align-items: center; text-align: center; }';
-        c += '.btm-divider { width: 1px; height: 230px; background-color: #d4d4d4; margin: 0 10px; }'; 
         c += '.btm-left { width: 48%; display: flex; flex-direction: column; align-items: center; text-align: center; }';
         c += '.btm-left img { margin-top: -10px !important; }';
-        c += '.verify-box { margin-top: 15px !important; }';
-        c += '.stamp-box { letter-spacing: -0.8px !important; }';
         c += '.verify-box { margin-top: 5px; text-align: center; width: 100%; }';
         c += '.link-verify { font-family: "Times New Roman", serif !important; font-size: 14px; font-weight: bold; color: blue !important; text-decoration: underline; display: block; line-height: 1.2; }';
-        c += '.stamp-box { margin-top: 20px; text-align: left; width: 100%; font-weight: bold; line-height: 1.6; color: #000 !important; font-family: "Times New Roman", serif !important; }';
         c += '@media print { @page { size: A3; margin: 0; } body { padding: 50px 60px; } }';
         c += '</style></head><body>';
+
+        const cleanHij = (v) => (v || '').replace(/هـ?/g, '').replace(/\s+/g, ' ').trim();
+        const dInHijClean = cleanHij(document.getElementById('dInHij').value);
+        const dOutHijClean = cleanHij(document.getElementById('dOutHij').value);
+
         const titleAr = isCompanion ? 'تقرير مرافقة مريض' : 'تقرير إجازة مرضية';
         const titleEn = isCompanion ? 'Companion SickLeave Report' : 'Sick Leave Report';
-        c += '<div class="header"><div style="text-align:right;"><img src="https://i.postimg.cc/k5xY1N5Q/1771635125900.png" height="120"></div><div class="h-center"><img src="https://i.postimg.cc/8k4g9m8x/1771635125900.png" height="110"></div><div style="text-align:left;"></div></div>';
 
+        c += '<div class="header"><div style="text-align:right;"><img src="https://i.postimg.cc/k5xY1N5Q/1771635125900.png" height="120"></div><div class="h-center"><img src="https://i.postimg.cc/8k4g9m8x/1771635125900.png" height="110"></div><div style="text-align:left;"></div></div>';
         c += '<table><colgroup><col width="20%"><col width="30%"><col width="30%"><col width="20%"></colgroup>';
         c += '<tr><td class="ar-label">رمز الإجازة</td><td colspan="2" class="data-cell" style="font-size:18px;">'+getVal('serviceCode')+'</td><td class="en-label">Leave ID</td></tr>';
-        
-        // تنظيف "هـ" من قيم التاريخ الهجري قبل الطباعة فقط (دون تعديل صفحة الإدخال)
-        const cleanHij = (v) => (v || '').replace(/هـ?/g, '').replace(/\s+/g, ' ').trim();
-        const dInHijClean = cleanHij(getVal('dInHij'));
-        const dOutHijClean = cleanHij(getVal('dOutHij'));
-
-        // الصف الأزرق
         c += '<tr class="blue"><td class="ar-label">مدة الإجازة</td><td style="color:white !important; font-weight:normal;">'+getVal('dur')+'</td><td class="data-cell"> يوم</td><td class="en-label">Duration</td></tr>';
-        
-        // صفوف التواريخ المصلحة والموحدة بالخط التلقائي للأرقام
         c += '<tr><td class="ar-label">تاريخ الدخول</td><td class="data-cell"><span class="date-fix">'+dInHijClean+'</span></td><td class="data-cell"><span class="date-fix">'+formatDD(getVal('dIn'))+'</span></td><td class="en-label">Admission Date</td></tr>';
         c += '<tr class="gray"><td class="ar-label">تاريخ الخروج</td><td class="data-cell"><span class="date-fix">'+dOutHijClean+'</span></td><td class="data-cell"><span class="date-fix">'+formatDD(getVal('dOut'))+'</span></td><td class="en-label">Discharge Date</td></tr>';
         c += '<tr><td class="ar-label">تاريخ إصدار التقرير</td><td colspan="2" class="data-cell"><span class="date-fix">'+formatDD(getVal('dIss'))+'</span></td><td class="en-label">Issue Date</td></tr>';
@@ -419,19 +404,17 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
 
         const practitionerLabelEn = isCompanion ? 'Physician Name' : 'Practitioner';
         const practitionerLabelAr = isCompanion ? 'اسم الطبيب' : 'اسم الممارس';
-       c += '<tr class="gray"><td class="ar-label">'+practitionerLabelAr+'</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('docAr')+'</td><td class="data-cell">'+getVal('docEn')+'</td><td class="en-label">'+practitionerLabelEn+'</td></tr>';
+        c += '<tr class="gray"><td class="ar-label">'+practitionerLabelAr+'</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('docAr')+'</td><td class="data-cell">'+getVal('docEn')+'</td><td class="en-label">'+practitionerLabelEn+'</td></tr>';
         c += '<tr><td class="ar-label">المسمى الوظيفي</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('jobAr')+'</td><td class="data-cell">'+getVal('jobEn')+'</td><td class="en-label">Position</td></tr>';
 
-        
+        c += '</table>';
         c += '<div class="btm"><div class="btm-right"><img src="'+logoUrl+'" height="130"><div style="font-weight:700; font-size:16px; margin-top:10px; color:#000000 !important;">'+getVal('hospAr')+'</div><div style="font-size:12px; color:#333;">'+getVal('hospLic')+'</div></div>';
         c += '<div class="btm-left"><img src="https://i.postimg.cc/wxLvyxYk/1782048408335.png" width="130"><div class="verify-box"><span style="font-size: 13px; font-weight: bold; display: block;">طباعة وتوثيق</span><span class="link-verify">https://seha-platform.vercel.app/verify</span></div></div></div>';
-        
-        // append script to wait for fonts to load before printing
+
+        // wait for fonts to load in print window before printing (more reliable than onload)
         c += '<script>';
-        c += 'if (document.fonts && document.fonts.ready) {';
-        c += '  document.fonts.ready.then(function(){ window.print(); setTimeout(function(){ window.close(); }, 300); });';
-        c += '} else { window.print(); setTimeout(function(){ window.close(); }, 300); }';
-        c += '<'+'/script>';
+        c += 'Promise.all([document.fonts.load("1em \'Noto Sans Arabic\'"), document.fonts.load("700 1em \'Noto Sans Arabic\'")]).then(function(){ window.print(); setTimeout(function(){ window.close(); }, 300); }).catch(function(){ window.print(); setTimeout(function(){ window.close(); }, 300); });';
+        c += '<' + '/script>';
 
         c += '</body></html>';
 
