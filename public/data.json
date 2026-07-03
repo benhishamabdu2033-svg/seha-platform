@@ -404,6 +404,20 @@
       "jobTitle": "نائب باطنية",
       "issueDate": "2026-07-08",
       "leaveType": "مرافق"
+    },
+    {
+      "leaveCode": "GSL26070338462",
+      "serviceCode": "GSL26070338462",
+      "nationalId": "1232345533",
+      "idNumber": "1232345533",
+      "name": "مسفر العتيبي ",
+      "admissionDate": "2026-07-03",
+      "dischargeDate": "2026-07-06",
+      "leaveDuration": "4",
+      "doctorName": "أحمد أبو عامر",
+      "jobTitle": "نائب باطنية",
+      "issueDate": "2026-07-06",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
