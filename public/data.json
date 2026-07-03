@@ -432,6 +432,20 @@
       "jobTitle": "نائب باطنية",
       "issueDate": "2026-07-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26070394771",
+      "serviceCode": "GSL26070394771",
+      "nationalId": "1255345533",
+      "idNumber": "1255345533",
+      "name": "مسفر العتيبي ",
+      "admissionDate": "2026-07-02",
+      "dischargeDate": "2026-07-06",
+      "leaveDuration": "5",
+      "doctorName": "فهد السبيعي",
+      "jobTitle": "نائب أول باطنية",
+      "issueDate": "2026-07-06",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
