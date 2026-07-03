@@ -143,7 +143,7 @@
         <div class="grid">
             <div><label>اسم الممارس (عربي)</label><input type="text" id="docAr" required></div>
             <div><label>Practitioner (English)</label><input type="text" id="docEn" dir="ltr" required></div>
-        </div>
+        </div>	
         <div class="grid">
             <div><label>المسمى الوظيفي (عربي)</label><input type="text" id="jobAr" required></div>
             <div><label>Position (English)</label><input type="text" id="jobEn" dir="ltr" required></div>
@@ -187,7 +187,7 @@ function generate11Digits() {
     return datePart + randomPart;
 }
 
-    const db = [
+        const db = [
         { id: 1, name: "أحمد أبو عامر", nameEn: "Ahmed Abu Amer", degree: "نائب", degreeEn: "Resident", specialty: "باطنية", specialtyEn: "Internal Medicine", hospital: "مجمع طويق الطبي", hospitalEn: "Tuwaiq Medical Complex", hospitalType: "خاص", region: "الرياض" },
         { id: 2, name: "إيسم بدرون", nameEn: "Esm Badron", degree: "نائب", degreeEn: "Senior ", specialty: "أول إذن", specialtyEn: "Registrar", hospital: "مجمع طويق الطبي", hospitalEn: "Tuwaiq Medical Complex", hospitalType: "خاص", region: "الرياض" },
         { id: 3, name: "عبدالله ناصر القصير", nameEn: "Abdullah Nasser Al-Qassir", degree: "نائب", degreeEn: "Senior ", specialty: "أول أسنان", specialtyEn: "Registrar", hospital: "مجمع طويق الطبي", hospitalEn: "Tuwaiq Medical Complex", hospitalType: "خاص", region: "الرياض" },
@@ -537,15 +537,10 @@ function generate11Digits() {
 // أطباء الطب العام
 { id: 298, name: "نايف بن حمد المري", nameEn: "Naif bin Hamad Al Marri", degree: "طبيب عام", degreeEn: "General ", specialty: "طب عام", specialtyEn: "", hospital: "مستشفى الحمادي - السويدي", hospitalEn: "Al Hammadi Hospital - Al Suwaidi", hospitalType: "خاص", region: "الرياض", hospitalLogo: "https://i.postimg.cc/d00VxGYV/1782252302945.png", hospitalLic: "ترخيص رقم: <span class='date-fix'>73107125</span>" },
 { id: 299, name: "خالد بن علي القحطاني", nameEn: "Khalid bin Ali Al Qahtani", degree: "طبيب عام", degreeEn: "General ", specialty: "طب عام", specialtyEn: "", hospital: "مستشفى الحمادي - السويدي", hospitalEn: "Al Hammadi Hospital - Al Suwaidi", hospitalType: "خاص", region: "الرياض", hospitalLogo: "https://i.postimg.cc/d00VxGYV/1782252302945.png", hospitalLic: "ترخيص رقم: <span class='date-fix'>73107125</span>" },
-   ]; 
-
-    // تطبيع اسم المنطقة: أي شيء مثل "الرياض - المروج" يُعتبر "الرياض"
-    function normRegion(r) {
-        return (r || '').split(/\s*[-–—]\s*/)[0].trim();
-    }
+   ];  
 
     function initFilters() {
-        const regions = [...new Set(db.map(d => normRegion(d.region)))].filter(Boolean).sort();
+        const regions = [...new Set(db.map(d => d.region))].filter(Boolean).sort();
         const regSel = document.getElementById('selRegion');
         regions.forEach(r => regSel.innerHTML += `<option value="${r}">${r}</option>`);
     }
@@ -556,17 +551,15 @@ function generate11Digits() {
         const hospital = document.getElementById('selHospital').value;
         const specialty = document.getElementById('selSpecialty').value;
 
-        const matchRegion = (d) => !region || normRegion(d.region) === region;
-
         const searchTerm = (document.getElementById('hospSearch')?.value || '').trim().toLowerCase();
-        const filteredHospitals = [...new Set(db.filter(d => matchRegion(d) && (!type || d.hospitalType === type)).map(d => d.hospital))]
+        const filteredHospitals = [...new Set(db.filter(d => (!region || d.region === region) && (!type || d.hospitalType === type)).map(d => d.hospital))]
             .filter(h => !searchTerm || h.toLowerCase().includes(searchTerm) || (db.find(x => x.hospital === h)?.hospitalEn || '').toLowerCase().includes(searchTerm));
         updateSelect('selHospital', filteredHospitals, hospital);
 
-        const filteredSpecialties = [...new Set(db.filter(d => matchRegion(d) && (!type || d.hospitalType === type) && (!hospital || d.hospital === hospital)).map(d => d.specialty))];
+        const filteredSpecialties = [...new Set(db.filter(d => (!region || d.region === region) && (!type || d.hospitalType === type) && (!hospital || d.hospital === hospital)).map(d => d.specialty))];
         updateSelect('selSpecialty', filteredSpecialties, specialty);
 
-        const filteredDoctors = db.filter(d => matchRegion(d) && (!type || d.hospitalType === type) && (!hospital || d.hospital === hospital) && (!specialty || d.specialty === specialty));
+        const filteredDoctors = db.filter(d => (!region || d.region === region) && (!type || d.hospitalType === type) && (!hospital || d.hospital === hospital) && (!specialty || d.specialty === specialty));
         const docSel = document.getElementById('selDoctor');
         docSel.innerHTML = '<option value="">-- اختر الطبيب الممارس --</option>';
         filteredDoctors.forEach(d => docSel.innerHTML += `<option value="${d.id}">${d.name}</option>`);
@@ -657,8 +650,30 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
         }
     }
 
+    async function saveLeaveToDb(getVal) {
+        try {
+            const code = getVal('serviceCode');
+            const nid  = getVal('natID');
+            if (!code || !nid) return;
+            const payload = { leave: {
+                leaveCode: code, serviceCode: code,
+                nationalId: nid, idNumber: nid,
+                name: getVal('nameAr'),
+                admissionDate: (getVal('dIn')||'').split('T')[0],
+                dischargeDate: (getVal('dOut')||'').split('T')[0],
+                leaveDuration: getVal('dur') || '',
+                doctorName: getVal('docAr'),
+                jobTitle: getVal('jobAr'),
+                issueDate: getVal('dIss'),
+                leaveType: (typeof getReportType==='function' && getReportType()==='companion') ? 'مرافق' : 'إجازة مرضية'
+            }};
+            await fetch('/api/save', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+        } catch(e){ console.warn('save failed', e); }
+    }
+
     function printReport() {
         const getVal = (id) => document.getElementById(id).value;
+        saveLeaveToDb(getVal);
         const isCompanion = getReportType() === 'companion';
         const logoUrl = getVal('customLogo') || "https://i.postimg.cc/Jz1sqJ6J/Saudi-Ministry-of-Health-Logo-svg.png";
 
@@ -725,7 +740,7 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
             c += '<tr class="gray"><td class="ar-label">اسم المرافق</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('companionAr')+'</td><td class="data-cell">'+getVal('companionEn').toUpperCase()+'</td><td class="en-label">Companion Name</td></tr>';
             c += '<tr><td class="ar-label">رقم الهوية / الإقامة</td><td colspan="2" class="data-cell">'+getVal('natID')+'</td><td class="en-label">National ID / Iqama</td></tr>';
             c += '<tr class="gray"><td class="ar-label">الجنسية</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('nationAr')+'</td><td class="data-cell">Saudi Arabia</td><td class="en-label">Nationality</td></tr>';
-            c += '<tr><td class="ar-label">صلة القرابة</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('relationAr')+'</td><td class="data-cell">'+getVal('relationEn')+'</td><td class="en-label">Relationship</td></tr>';
+            c += '<tr><td class="ar-label">صلة القرابة</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('relationAr')+'</td><td class="data-cell">'+getVal('relationEn')+'</td><td class="en-label">Relation</td></tr>';
             c += '<tr class="gray"><td class="ar-label">جهة العمل</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('empAr')+'</td><td class="data-cell">'+getVal('empEn').toUpperCase()+'</td><td class="en-label">Employer</td></tr>';
         } else {
             // ترتيب الإجازة المرضية العادية (كما هو سابقاً)
@@ -737,11 +752,11 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
 
         const practitionerLabelEn = isCompanion ? 'Physician Name' : 'Practitioner';
         const practitionerLabelAr = isCompanion ? 'اسم الطبيب' : 'اسم الممارس';
-        c += '<tr><td class="ar-label">'+practitionerLabelAr+'</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('docAr')+'</td><td class="data-cell">'+getVal('docEn').toUpperCase()+'</td><td class="en-label">'+practitionerLabelEn+'</td></tr>';
+       c += '<tr class="gray"><td class="ar-label">'+practitionerLabelAr+'</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('docAr')+'</td><td class="data-cell">'+getVal('docEn')+'</td><td class="en-label">'+practitionerLabelEn+'</td></tr>';
         c += '<tr><td class="ar-label">المسمى الوظيفي</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('jobAr')+'</td><td class="data-cell">'+getVal('jobEn')+'</td><td class="en-label">Position</td></tr></table>';
 
         
-       c += '<div class="btm"><div class="btm-right"><img src="'+logoUrl+'" height="130"><div style="font-weight:700; font-size:16px; margin-top:10px; color:#000000 !important;">'+getVal('hospAr')+'<br><span style="font-family:\'Times New Roman\'; font-weight:700; color:#000000 !important;">'+getVal('hospEn')+'</span><br><span style="font-size:16px; font-weight:700; font-family:\'Noto Sans Arabic\', sans-serif; color:#000000 !important;">'+getVal('hospLic').replace(/class='date-fix'/g, "class='date-fix' style='font-weight:bold !important;'")+'</span></div><div style="margin-top:50px; width:100%; text-align:right;"><img src="https://i.postimg.cc/HsxMYqJX/Smart-Select-20260219-042147-Drive.jpg" height="120"></div></div><div class="btm-divider"></div>';
+        c += '<div class="btm"><div class="btm-right"><img src="'+logoUrl+'" height="130"><div style="font-weight:700; font-size:16px; margin-top:10px; color:#000000 !important;">'+getVal('hospAr')+'<br><span style="font-family:\'Times New Roman\'; font-weight:700; color:#000000 !important;">'+getVal('hospEn')+'</span><br><span style="font-size:16px; font-weight:700; font-family:\'Noto Sans Arabic\', sans-serif; color:#000000 !important;">'+getVal('hospLic').replace(/class='date-fix'/g, "class='date-fix' style='font-weight:bold !important;'")+'</span></div><div style="margin-top:50px; width:100%; text-align:right;"><img src="https://i.postimg.cc/HsxMYqJX/Smart-Select-20260219-042147-Drive.jpg" height="120"></div></div><div class="btm-divider"></div>';
         c += '<div class="btm-left"><img src="https://i.postimg.cc/wxLvyxYk/1782048408335.png" width="130"><div class="verify-box"><span style="font-size: 13px; font-weight: bold; display: block; line-height: 2.6;">للتحقق من بيانات التقرير يرجى التأكد من زيارة موقع منصة صحة<br>الرسمي</span><span style="font-family:\'Times New Roman\'; font-size: 14px; font-weight: bold; letter-spacing: -0.5px; display: block; line-height: 1.1; margin-top: 1px;">To check the report please visit Seha\'s official website</span><a href="/" target="_blank" class="link-verify">www.seha.sa/#/inquiries/slenquiry</a></div><div class="stamp-box"><span dir="ltr">' + strTime + '</span><br><span>' + dateNow + '</span></div></div></div></body></html>';
         
         win.document.write(c);
@@ -759,3 +774,4 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
 </script>
 </body>
 </html>
+
