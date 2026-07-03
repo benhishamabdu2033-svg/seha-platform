@@ -474,6 +474,20 @@
       "jobTitle": "أخصائي طب عام",
       "issueDate": "2026-07-06",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26070429453",
+      "serviceCode": "PSL26070429453",
+      "nationalId": "5252526525",
+      "idNumber": "5252526525",
+      "name": "kjflwh",
+      "admissionDate": "2026-07-04",
+      "dischargeDate": "2026-07-08",
+      "leaveDuration": "5",
+      "doctorName": "هالة عبدالقادر",
+      "jobTitle": "أخصائية طب العائلة",
+      "issueDate": "2026-07-08",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
