@@ -418,6 +418,20 @@
       "jobTitle": "أخصائي طب الباطنى",
       "issueDate": "2026-07-08",
       "leaveType": "مرافق"
+    },
+    {
+      "leaveCode": "PSL26070446164",
+      "serviceCode": "PSL26070446164",
+      "nationalId": "5555667755",
+      "idNumber": "5555667755",
+      "name": "سالم الدوسري ",
+      "admissionDate": "2026-07-08",
+      "dischargeDate": "2026-07-08",
+      "leaveDuration": "1",
+      "doctorName": "كريم رزق أحمد",
+      "jobTitle": "أخصائي باطنة (جهاز هضمي)",
+      "issueDate": "2026-07-08",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
