@@ -488,6 +488,20 @@
       "jobTitle": "نائب باطنية",
       "issueDate": "2026-07-08",
       "leaveType": "مرافق"
+    },
+    {
+      "leaveCode": "PSL26070435888",
+      "serviceCode": "PSL26070435888",
+      "nationalId": "25258588588",
+      "idNumber": "25258588588",
+      "name": "",
+      "admissionDate": "2026-07-04",
+      "dischargeDate": "2026-07-08",
+      "leaveDuration": "5",
+      "doctorName": "سلطان الملحم",
+      "jobTitle": "نائب باطنية",
+      "issueDate": "2026-07-08",
+      "leaveType": "مرافق"
     }
   ]
 }
