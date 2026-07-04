@@ -516,6 +516,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-07-08",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26070464910",
+      "serviceCode": "PSL26070464910",
+      "nationalId": "1615153587",
+      "idNumber": "1615153587",
+      "name": "عبدالله احمد الحارثي ",
+      "admissionDate": "2026-07-04",
+      "dischargeDate": "2026-07-08",
+      "leaveDuration": "5",
+      "doctorName": "احمد على غازي",
+      "jobTitle": "أخصائي طب الباطنى",
+      "issueDate": "2026-07-08",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
