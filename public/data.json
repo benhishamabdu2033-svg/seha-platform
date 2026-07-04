@@ -502,6 +502,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-07-08",
       "leaveType": "مرافق"
+    },
+    {
+      "leaveCode": "PSL26070413384",
+      "serviceCode": "PSL26070413384",
+      "nationalId": "1098318791",
+      "idNumber": "1098318791",
+      "name": "علي حامد محمد الشمراني",
+      "admissionDate": "2026-07-04",
+      "dischargeDate": "2026-07-08",
+      "leaveDuration": "5",
+      "doctorName": "محمد الأمين",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-07-08",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
