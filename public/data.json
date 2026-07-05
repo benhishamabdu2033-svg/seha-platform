@@ -600,6 +600,20 @@
       "jobTitle": "طبيب طب عام",
       "issueDate": "2026-07-05",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26070575438",
+      "serviceCode": "PSL26070575438",
+      "nationalId": "4466554565",
+      "idNumber": "4466554565",
+      "name": "شذى ساعد الهذلي",
+      "admissionDate": "2026-07-05",
+      "dischargeDate": "2026-07-09",
+      "leaveDuration": "5",
+      "doctorName": "سارة الدوسري",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-07-09",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
