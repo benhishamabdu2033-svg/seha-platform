@@ -558,6 +558,20 @@
       "jobTitle": "طبيبة طب أسرة",
       "issueDate": "2026-07-05",
       "leaveType": "مشهد مراجعة"
+    },
+    {
+      "leaveCode": "PSL26070538775",
+      "serviceCode": "PSL26070538775",
+      "nationalId": "1110970280",
+      "idNumber": "1110970280",
+      "name": "هاشم الكناني",
+      "admissionDate": "2026-07-05",
+      "dischargeDate": "2026-07-09",
+      "leaveDuration": "5",
+      "doctorName": "خالد أحمد التركي",
+      "jobTitle": "استشاري باطنية (جهاز هضمي)",
+      "issueDate": "2026-07-09",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
