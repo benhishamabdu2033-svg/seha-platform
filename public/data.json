@@ -614,6 +614,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-07-09",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26070588396",
+      "serviceCode": "GSL26070588396",
+      "nationalId": "1597534565",
+      "idNumber": "1597534565",
+      "name": "ناتبغهلنتبررر",
+      "admissionDate": "2026-07-02",
+      "dischargeDate": "2026-07-06",
+      "leaveDuration": "5",
+      "doctorName": "يوسف الرشيدي",
+      "jobTitle": "طبيب طب عام",
+      "issueDate": "2026-07-06",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
