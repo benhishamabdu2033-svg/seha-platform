@@ -628,6 +628,20 @@
       "jobTitle": "طبيب طب عام",
       "issueDate": "2026-07-06",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26070523982",
+      "serviceCode": "PSL26070523982",
+      "nationalId": "1515151555",
+      "idNumber": "1515151555",
+      "name": "صفاء الصافي عبدالله ",
+      "admissionDate": "2026-07-05",
+      "dischargeDate": "2026-07-09",
+      "leaveDuration": "5",
+      "doctorName": "سارة الدوسري",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-07-09",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
