@@ -656,6 +656,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-07-07",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26070695859",
+      "serviceCode": "GSL26070695859",
+      "nationalId": "9485765555",
+      "idNumber": "9485765555",
+      "name": "سلام حربي",
+      "admissionDate": "2026-07-05",
+      "dischargeDate": "2026-07-09",
+      "leaveDuration": "5",
+      "doctorName": "شادي نعسان",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-07-09",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
