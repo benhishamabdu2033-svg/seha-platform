@@ -642,6 +642,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-07-09",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26070547370",
+      "serviceCode": "PSL26070547370",
+      "nationalId": "1425361425",
+      "idNumber": "1425361425",
+      "name": "صفاء البحر",
+      "admissionDate": "2026-07-03",
+      "dischargeDate": "2026-07-07",
+      "leaveDuration": "5",
+      "doctorName": "سارة الدوسري",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-07-07",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
