@@ -684,6 +684,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-07-10",
       "leaveType": "مرافق"
+    },
+    {
+      "leaveCode": "PSL26071155552",
+      "serviceCode": "PSL26071155552",
+      "nationalId": "1098318791",
+      "idNumber": "1098318791",
+      "name": "علي حامد محمد الشمراني",
+      "admissionDate": "",
+      "dischargeDate": "",
+      "leaveDuration": "",
+      "doctorName": "سارة الدوسري",
+      "jobTitle": "طبيب عام",
+      "issueDate": "",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
