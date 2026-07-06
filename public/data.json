@@ -670,6 +670,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-07-09",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26070625301",
+      "serviceCode": "PSL26070625301",
+      "nationalId": "5554446665",
+      "idNumber": "5554446665",
+      "name": "محرز مناحي القحطاني ",
+      "admissionDate": "2026-07-06",
+      "dischargeDate": "2026-07-10",
+      "leaveDuration": "5",
+      "doctorName": "سارة الدوسري",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-07-10",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
