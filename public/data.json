@@ -698,6 +698,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-07-11",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26070612790",
+      "serviceCode": "PSL26070612790",
+      "nationalId": "1452145214",
+      "idNumber": "1452145214",
+      "name": "ناتاترلحزور",
+      "admissionDate": "2026-07-06",
+      "dischargeDate": "2026-07-10",
+      "leaveDuration": "5",
+      "doctorName": "محمد زيان",
+      "jobTitle": "أخصائي طب عام",
+      "issueDate": "2026-07-10",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
