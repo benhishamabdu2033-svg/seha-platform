@@ -28,7 +28,7 @@
       "issueDate": "2026-01-27",
       "leaveType": "GSL"
     },
-      {
+    {
       "leaveCode": "02954521598",
       "serviceCode": "02954521598",
       "nationalId": "1128303987",
@@ -41,6 +41,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2025-10-16",
       "leaveType": "GSL"
+    },
+    {
+      "leaveCode": "GSL26070836633",
+      "serviceCode": "GSL26070836633",
+      "nationalId": "1125409357",
+      "idNumber": "1125409357",
+      "name": "شكريه",
+      "admissionDate": "2026-07-08",
+      "dischargeDate": "2026-07-15",
+      "leaveDuration": "8",
+      "doctorName": "فهد السبيعي",
+      "jobTitle": "نائب أول باطنية",
+      "issueDate": "2026-07-15",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
