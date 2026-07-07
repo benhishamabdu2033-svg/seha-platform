@@ -712,6 +712,20 @@
       "jobTitle": "أخصائي طب عام",
       "issueDate": "2026-07-10",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26070718396",
+      "serviceCode": "GSL26070718396",
+      "nationalId": "5544454549",
+      "idNumber": "5544454549",
+      "name": "الاسلام",
+      "admissionDate": "2026-07-07",
+      "dischargeDate": "2026-07-11",
+      "leaveDuration": "5",
+      "doctorName": "فهد السبيعي",
+      "jobTitle": "نائب أول باطنية",
+      "issueDate": "2026-07-11",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
