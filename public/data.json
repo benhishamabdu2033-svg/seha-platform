@@ -726,6 +726,20 @@
       "jobTitle": "نائب أول باطنية",
       "issueDate": "2026-07-11",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26070757003",
+      "serviceCode": "GSL26070757003",
+      "nationalId": "65479927355",
+      "idNumber": "65479927355",
+      "name": "حسين امبثن  حسين البثن  مستاج بيت ",
+      "admissionDate": "2026-07-07",
+      "dischargeDate": "2026-07-11",
+      "leaveDuration": "5",
+      "doctorName": "فواز الرويلي",
+      "jobTitle": "طبيب طب عام",
+      "issueDate": "2026-07-11",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
