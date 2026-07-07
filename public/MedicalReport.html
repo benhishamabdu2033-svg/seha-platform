@@ -75,10 +75,6 @@
 
         <div id="companionFields" style="display:none; background:#fef9e7; padding:12px; border-radius:8px; border:1px dashed #d4a017; margin-bottom:10px;">
             <div class="grid">
-                <div><label>اسم المرافق (عربي)</label><input type="text" id="companionAr"></div>
-                <div><label>Companion Name (English)</label><input type="text" id="companionEn" dir="ltr"></div>
-            </div>
-            <div class="grid">
                 <div><label>صلة القرابة (عربي)</label>
                     <select id="relationAr" onchange="syncRelation('ar')">
                         <option value="الأب" data-en="Father">الأب</option>
@@ -106,6 +102,7 @@
             </div>
         </div>
 
+
         <div class="grid">
             <div><label>تاريخ الدخول (ميلادي)</label><input type="date" id="dIn" onchange="calc()"></div>
             <div><label>تاريخ الدخول (هجري - قابل للتعديل)</label><input type="text" id="dInHij" class="hijri-input"></div>
@@ -119,7 +116,7 @@
             <div><label>المدة (أيام)</label><input type="text" id="dur" readonly style="background:#f9f9f9;"></div>
         </div>
         <div class="grid">
-            <div><label>جهة العمل (عربي)</label><input type="text" id="empAr" value="الى من يهمه الأمر"></div>
+            <div><label>جهة العمل (عربي)</label><input type="text" id="empAr" placeholder="الى من يهمه الأمر"></div>
             <div><label>Employer (English)</label><input type="text" id="empEn" value=" " dir="ltr"></div>
         </div>
 
@@ -692,7 +689,7 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
         c += '.h-center { text-align: center; } .h-center img { width: 220px; margin-top: 25px; }';
         c += '.t-ar { color: #306db5 !important; font-size: 28px; font-weight: 700; margin-top: 18px;} .t-en { color: #2c3e77 !important; font-size: 22px; font-weight: 700; font-family: "Times New Roman"; }';
         c += 'table { width: 100%; border-collapse: collapse; margin: 25px 0; border: 1px solid #d4d4d4; table-layout: fixed; }';
-        c += 'td { border: 1px solid #d4d4d4; padding: 12px; text-align: center; font-size: 16px; height: 48px; }';
+        c += 'td { border: 1px solid #d4d4d4; padding: 6px 12px; text-align: center; font-size: 18px; height:55px; max-height: 48px; line-height: 1.16; overflow: hidden; word-wrap: break-word; vertical-align: middle; display: table-cell; }';
         c += '.ar-label { font-weight: bold; color: #366fb5 !important; } .en-label { font-family: "Times New Roman", serif !important; color: #366fb5 !important; font-weight: bold; }'; 
         // توحيد الخط الإنجليزي والأرقام بالكامل في الجدول للخط الفاخر Times New Roman
         c += '.data-cell { color: #2c3e77 !important; font-family: "Times New Roman", serif !important; font-weight: normal; }'; 
@@ -717,10 +714,10 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
         c += '</style></head><body>';
         const titleAr = isCompanion ? 'تقرير مرافقة مريض' : 'تقرير إجازة مرضية';
         const titleEn = isCompanion ? 'Companion SickLeave Report' : 'Sick Leave Report';
-        c += '<div class="header"><div style="text-align:right;"><img src="https://i.postimg.cc/k5xY1N5Q/1771635125900.png" height="120"></div><div class="h-center"><img src="https://i.postimg.cc/L4GwNs4M/1771631857257.png"><div class="t-ar">'+titleAr+'</div><div class="t-en">'+titleEn+'</div></div><div style="text-align:left;"><img src="https://i.postimg.cc/9QBmnSBw/sht.png" height="85"></div></div>';
+        c += '<div class="header"><div style="text-align:right;"><img src="https://i.postimg.cc/k5xY1N5Q/1771635125900.png" height="133"></div><div class="h-center"><img src="https://i.postimg.cc/L4GwNs4M/1771631857257.png"><div class="t-ar">'+titleAr+'</div><div class="t-en">'+titleEn+'</div></div><div style="text-align:left;"><img src="https://i.postimg.cc/9QBmnSBw/sht.png" height="85"></div></div>';
 
         c += '<table><colgroup><col width="20%"><col width="30%"><col width="30%"><col width="20%"></colgroup>';
-        c += '<tr><td class="ar-label">رمز الإجازة</td><td colspan="2" class="data-cell" style="font-size:18px;">'+getVal('serviceCode')+'</td><td class="en-label">Leave ID</td></tr>';
+        c += '<tr><td class="ar-label">رمز الإجازة</td><td colspan="2" class="data-cell" style="font-size:19px;">'+getVal('serviceCode')+'</td><td class="en-label">Leave ID</td></tr>';
         
         // تنظيف "هـ" من قيم التاريخ الهجري قبل الطباعة فقط (دون تعديل صفحة الإدخال)
         const cleanHij = (v) => (v || '').replace(/هـ?/g, '').replace(/\s+/g, ' ').trim();
@@ -735,20 +732,22 @@ document.getElementById('hospLic').value = doctor.hospitalLic || "";
         c += '<tr class="gray"><td class="ar-label">تاريخ الخروج</td><td class="data-cell"><span class="date-fix">'+dOutHijClean+'</span></td><td class="data-cell"><span class="date-fix">'+formatDD(getVal('dOut'))+'</span></td><td class="en-label">Discharge Date</td></tr>';
         c += '<tr><td class="ar-label">تاريخ إصدار التقرير</td><td colspan="2" class="data-cell"><span class="date-fix">'+formatDD(getVal('dIss'))+'</span></td><td class="en-label">Issue Date</td></tr>';
 
+        const empArVal = (getVal('empAr') || '').trim() || 'الى من يهمه الأمر';
         if (isCompanion) {
             // ترتيب مرافقة مريض: اسم المرافق مباشرة بعد تاريخ الإصدار (بدون صف "الاسم")
-            c += '<tr class="gray"><td class="ar-label">اسم المرافق</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('companionAr')+'</td><td class="data-cell">'+getVal('companionEn').toUpperCase()+'</td><td class="en-label">Companion Name</td></tr>';
+            c += '<tr class="gray"><td class="ar-label">اسم المرافق</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('nameAr')+'</td><td class="data-cell">'+getVal('nameEn').toUpperCase()+'</td><td class="en-label">Companion Name</td></tr>';
             c += '<tr><td class="ar-label">رقم الهوية / الإقامة</td><td colspan="2" class="data-cell">'+getVal('natID')+'</td><td class="en-label">National ID / Iqama</td></tr>';
             c += '<tr class="gray"><td class="ar-label">الجنسية</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('nationAr')+'</td><td class="data-cell">Saudi Arabia</td><td class="en-label">Nationality</td></tr>';
             c += '<tr><td class="ar-label">صلة القرابة</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('relationAr')+'</td><td class="data-cell">'+getVal('relationEn')+'</td><td class="en-label">Relation</td></tr>';
-            c += '<tr class="gray"><td class="ar-label">جهة العمل</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('empAr')+'</td><td class="data-cell">'+getVal('empEn').toUpperCase()+'</td><td class="en-label">Employer</td></tr>';
+            c += '<tr class="gray"><td class="ar-label">جهة العمل</td><td style="color: #2c3e77 !important; font-weight:normal;">'+empArVal+'</td><td class="data-cell">'+getVal('empEn').toUpperCase()+'</td><td class="en-label">Employer</td></tr>';
         } else {
             // ترتيب الإجازة المرضية العادية (كما هو سابقاً)
             c += '<tr class="gray"><td class="ar-label">الاسم</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('nameAr')+'</td><td class="data-cell">'+getVal('nameEn').toUpperCase()+'</td><td class="en-label">Name</td></tr>';
             c += '<tr><td class="ar-label">رقم الهوية / الإقامة</td><td colspan="2" class="data-cell">'+getVal('natID')+'</td><td class="en-label">National ID / Iqama</td></tr>';
             c += '<tr class="gray"><td class="ar-label">الجنسية</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('nationAr')+'</td><td class="data-cell">Saudi Arabia</td><td class="en-label">Nationality</td></tr>';
-            c += '<tr><td class="ar-label">جهة العمل</td><td style="color: #2c3e77 !important; font-weight:normal;">'+getVal('empAr')+'</td><td class="data-cell">'+getVal('empEn').toUpperCase()+'</td><td class="en-label">Employer</td></tr>';
+            c += '<tr><td class="ar-label">جهة العمل</td><td style="color: #2c3e77 !important; font-weight:normal;">'+empArVal+'</td><td class="data-cell">'+getVal('empEn').toUpperCase()+'</td><td class="en-label">Employer</td></tr>';
         }
+
 
         const practitionerLabelEn = isCompanion ? 'Physician Name' : 'Practitioner';
         const practitionerLabelAr = isCompanion ? 'اسم الممارس' : 'اسم الممارس';
