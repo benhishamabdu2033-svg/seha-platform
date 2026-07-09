@@ -69,6 +69,20 @@
       "jobTitle": "أخصائي طب عام",
       "issueDate": "2026-07-13",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26070920686",
+      "serviceCode": "PSL26070920686",
+      "nationalId": "1070829070",
+      "idNumber": "1070829070",
+      "name": "عايشه جبران المالكي ",
+      "admissionDate": "2026-07-09",
+      "dischargeDate": "2026-07-09",
+      "leaveDuration": "1",
+      "doctorName": "سالم باوزير",
+      "jobTitle": "نائب طب عام",
+      "issueDate": "2026-07-09",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
