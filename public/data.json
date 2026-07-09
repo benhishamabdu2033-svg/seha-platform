@@ -97,6 +97,20 @@
       "jobTitle": "طبيب عام ",
       "issueDate": "2026-07-13",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26071043333",
+      "serviceCode": "PSL26071043333",
+      "nationalId": "1128303987",
+      "idNumber": "1128303987",
+      "name": "غادة عيد ندا العنزي",
+      "admissionDate": "2026-07-10",
+      "dischargeDate": "2026-07-11",
+      "leaveDuration": "2",
+      "doctorName": "طارق عبدالعزيز ",
+      "jobTitle": "طبيب عام ",
+      "issueDate": "2026-07-11",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
