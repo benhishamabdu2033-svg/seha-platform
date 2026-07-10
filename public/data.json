@@ -57,20 +57,6 @@
       "leaveType": "إجازة مرضية"
     },
     {
-      "leaveCode": "PSL26071046121",
-      "serviceCode": "PSL26071046121",
-      "nationalId": "1070829070",
-      "idNumber": "1070829070",
-      "name": "عائشه جبران المالكي ",
-      "admissionDate": "2026-07-14",
-      "dischargeDate": "2026-07-14",
-      "leaveDuration": "1",
-      "doctorName": "محمد حسن",
-      "jobTitle": "طبيب باطنية",
-      "issueDate": "2026-07-14",
-      "leaveType": "إجازة مرضية"
-    },
-    {
       "leaveCode": "PSL26071446121",
       "serviceCode": "PSL26071446121",
       "nationalId": "1070829070",
