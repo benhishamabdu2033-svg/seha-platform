@@ -83,6 +83,20 @@
       "jobTitle": "نائب باطنية",
       "issueDate": "2026-07-13",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26071167839",
+      "serviceCode": "PSL26071167839",
+      "nationalId": "1139819655",
+      "idNumber": "1139819655",
+      "name": "فيصل عبدالله الجهني الشمري",
+      "admissionDate": "2026-07-11",
+      "dischargeDate": "2026-07-15",
+      "leaveDuration": "5",
+      "doctorName": "عزة حمدي محمد شعبان",
+      "jobTitle": "استشاري الطب الباطني",
+      "issueDate": "2026-07-15",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
