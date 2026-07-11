@@ -97,6 +97,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-07-14",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26071447438",
+      "serviceCode": "PSL26071447438",
+      "nationalId": "1070829070",
+      "idNumber": "1070829070",
+      "name": "عائشه جبران المالكي ",
+      "admissionDate": "2026-07-11",
+      "dischargeDate": "2026-07-11",
+      "leaveDuration": "1",
+      "doctorName": "سعيد محمد نجيب الحوت",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-07-14",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
