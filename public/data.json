@@ -43,20 +43,6 @@
       "leaveType": "إجازة مرضية"
     },
     {
-      "leaveCode": "PSL26070920686",
-      "serviceCode": "PSL26070920686",
-      "nationalId": "1070829070",
-      "idNumber": "1070829070",
-      "name": "عائشه جبران المالكي ",
-      "admissionDate": "2026-07-11",
-      "dischargeDate": "2026-07-11",
-      "leaveDuration": "1",
-      "doctorName": "فتحية زين العابدين",
-      "jobTitle": "استشاري باطنية",
-      "issueDate": "2026-07-11",
-      "leaveType": "إجازة مرضية"
-    },
-    {
       "leaveCode": "PSL26071446121",
       "serviceCode": "PSL26071446121",
       "nationalId": "1070829070",
@@ -82,20 +68,6 @@
       "doctorName": "هند محمد علي عثمان الشايف",
       "jobTitle": "نائب باطنية",
       "issueDate": "2026-07-13",
-      "leaveType": "إجازة مرضية"
-    },
-    {
-      "leaveCode": "PSL26071420686",
-      "serviceCode": "PSL26071420686",
-      "nationalId": "1070829070",
-      "idNumber": "1070829070",
-      "name": "عائشه جبران المالكي ",
-      "admissionDate": "2026-07-11",
-      "dischargeDate": "2026-07-11",
-      "leaveDuration": "1",
-      "doctorName": "فتحية زين العابدين",
-      "jobTitle": "استشاري باطنية",
-      "issueDate": "2026-07-14",
       "leaveType": "إجازة مرضية"
     },
     {
