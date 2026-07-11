@@ -97,6 +97,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-07-12",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26071298243",
+      "serviceCode": "GSL26071298243",
+      "nationalId": "1057892042",
+      "idNumber": "1057892042",
+      "name": "هنادي احمد محمد المغربي ",
+      "admissionDate": "2026-07-12",
+      "dischargeDate": "2026-07-12",
+      "leaveDuration": "1",
+      "doctorName": "مشعل الغامدي",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-07-12",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
