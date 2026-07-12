@@ -111,6 +111,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-07-12",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26071297689",
+      "serviceCode": "GSL26071297689",
+      "nationalId": "1128741285 ",
+      "idNumber": "1128741285 ",
+      "name": "سارة سالم الصيعريي",
+      "admissionDate": "2026-07-10",
+      "dischargeDate": "2026-07-10",
+      "leaveDuration": "1",
+      "doctorName": "ياسر المحمدي",
+      "jobTitle": "نائب أول باطنية",
+      "issueDate": "2026-07-10",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
