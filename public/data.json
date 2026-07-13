@@ -139,6 +139,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-07-12",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26071325627",
+      "serviceCode": "PSL26071325627",
+      "nationalId": "1106870288",
+      "idNumber": "1106870288",
+      "name": "علي صالح علي الشمراني",
+      "admissionDate": "2026-07-11",
+      "dischargeDate": "2026-07-16",
+      "leaveDuration": "6",
+      "doctorName": "علي القحطاني",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-07-13",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
