@@ -167,6 +167,20 @@
       "jobTitle": " استشاري",
       "issueDate": "2026-07-14",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26071445720",
+      "serviceCode": "GSL26071445720",
+      "nationalId": "1134584315",
+      "idNumber": "1134584315",
+      "name": "راما هاني الحربي",
+      "admissionDate": "2026-07-14",
+      "dischargeDate": "2026-07-14",
+      "leaveDuration": "1",
+      "doctorName": "محمد الجزار",
+      "jobTitle": "أخصائي الطب الباطني ",
+      "issueDate": "2026-07-14",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
