@@ -181,6 +181,20 @@
       "jobTitle": "أخصائي الطب الباطني ",
       "issueDate": "2026-07-14",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26071559663",
+      "serviceCode": "GSL26071559663",
+      "nationalId": "1025694124",
+      "idNumber": "1025694124",
+      "name": "رضا العتيبي ",
+      "admissionDate": "2026-07-16",
+      "dischargeDate": "2026-07-16",
+      "leaveDuration": "1",
+      "doctorName": "تركي الهذلي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-07-16",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
