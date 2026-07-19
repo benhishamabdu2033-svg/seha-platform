@@ -223,6 +223,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-07-18",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26071937289",
+      "serviceCode": "PSL26071937289",
+      "nationalId": "1123537407",
+      "idNumber": "1123537407",
+      "name": "سندس ثروت محمدجميل كتبي",
+      "admissionDate": "2026-07-19",
+      "dischargeDate": "2026-07-19",
+      "leaveDuration": "1",
+      "doctorName": "سالم باوزير",
+      "jobTitle": "نائب طب عام",
+      "issueDate": "2026-07-19",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
