@@ -209,6 +209,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-07-05",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26071825811",
+      "serviceCode": "PSL26071825811",
+      "nationalId": "1109786184",
+      "idNumber": "1109786184",
+      "name": "جوري عبدالله الشهري",
+      "admissionDate": "2026-07-18",
+      "dischargeDate": "2026-07-18",
+      "leaveDuration": "1",
+      "doctorName": "أحمد خليل",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-07-18",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
