@@ -253,20 +253,6 @@
       "leaveType": "إجازة مرضية"
     },
     {
-      "leaveCode": "GSL26072160210",
-      "serviceCode": "GSL26072160210",
-      "nationalId": "2228710162",
-      "idNumber": "2228710162",
-      "name": "اسراء فواز الجبة ",
-      "admissionDate": "2026-07-19",
-      "dischargeDate": "2026-07-19",
-      "leaveDuration": "1",
-      "doctorName": "ياسر المحمدي",
-      "jobTitle": "نائب أول باطنية",
-      "issueDate": "2026-07-19",
-      "leaveType": "إجازة مرضية"
-    },
-    {
       "leaveCode": "GSL26071912936",
       "serviceCode": "GSL26071912936",
       "nationalId": "2228710162",
