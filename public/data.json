@@ -349,6 +349,20 @@
       "jobTitle": "نائب أول باطنية",
       "issueDate": "2026-07-27",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26072724450",
+      "serviceCode": "GSL26072724450",
+      "nationalId": "1098534611",
+      "idNumber": "1098534611",
+      "name": "عواد حامد السالم ",
+      "admissionDate": "2026-07-27",
+      "dischargeDate": "2026-07-27",
+      "leaveDuration": "1",
+      "doctorName": "شادي نعسان",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-07-27",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
