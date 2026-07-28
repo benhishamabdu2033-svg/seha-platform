@@ -433,6 +433,20 @@
       "jobTitle": "نائب أول باطنية",
       "issueDate": "2026-07-28",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26072626060",
+      "serviceCode": "GSL26072626060",
+      "nationalId": "1128741285",
+      "idNumber": "1128741285",
+      "name": "سارة سالم الصيعريي",
+      "admissionDate": "2026-07-26",
+      "dischargeDate": "2026-07-26",
+      "leaveDuration": "1",
+      "doctorName": "ياسر المحمدي",
+      "jobTitle": "نائب أول باطنية",
+      "issueDate": "2026-07-26",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
