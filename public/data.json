@@ -377,6 +377,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-07-28",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26072879510",
+      "serviceCode": "GSL26072879510",
+      "nationalId": "1069952925",
+      "idNumber": "1069952925",
+      "name": "عجيبه ناصر محمد الدوسري",
+      "admissionDate": "2026-07-27",
+      "dischargeDate": "2026-07-28",
+      "leaveDuration": "2",
+      "doctorName": "أحمد عبدالله حبيب",
+      "jobTitle": "استشاري باطنية ",
+      "issueDate": "2026-07-28",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
