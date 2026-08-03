@@ -517,6 +517,20 @@
       "jobTitle": "نائب أول باطنية",
       "issueDate": "2026-08-03",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26080455821",
+      "serviceCode": "PSL26080455821",
+      "nationalId": "1128741299",
+      "idNumber": "1128741299",
+      "name": "فهد العتيبي",
+      "admissionDate": "2026-08-03",
+      "dischargeDate": "2026-08-04",
+      "leaveDuration": "2",
+      "doctorName": "محمد زيان",
+      "jobTitle": "أخصائي طب عام",
+      "issueDate": "2026-08-04",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
