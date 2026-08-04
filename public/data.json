@@ -559,6 +559,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-07-31",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26080416015",
+      "serviceCode": "GSL26080416015",
+      "nationalId": "1119800827",
+      "idNumber": "1119800827",
+      "name": "شوق علي ",
+      "admissionDate": "",
+      "dischargeDate": "",
+      "leaveDuration": "",
+      "doctorName": "عبدالله الشهراني",
+      "jobTitle": "طبيب عام",
+      "issueDate": "",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
