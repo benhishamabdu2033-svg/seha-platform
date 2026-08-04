@@ -566,12 +566,12 @@
       "nationalId": "1119800827",
       "idNumber": "1119800827",
       "name": "شوق علي ",
-      "admissionDate": "",
-      "dischargeDate": "",
-      "leaveDuration": "",
+      "admissionDate": "2026-08-04",
+      "dischargeDate": "2026-08-04",
+      "leaveDuration": "1",
       "doctorName": "عبدالله الشهراني",
       "jobTitle": "طبيب عام",
-      "issueDate": "",
+      "issueDate": "2026-08-04",
       "leaveType": "إجازة مرضية"
     }
   ]
