@@ -545,6 +545,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-08-04",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26080493512",
+      "serviceCode": "GSL26080493512",
+      "nationalId": "1099729491",
+      "idNumber": "1099729491",
+      "name": "انهار زبن علي السلمي",
+      "admissionDate": "2026-07-31",
+      "dischargeDate": "2026-07-31",
+      "leaveDuration": "1",
+      "doctorName": "تركي الهذلي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-07-31",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
