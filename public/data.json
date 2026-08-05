@@ -601,6 +601,20 @@
       "jobTitle": "نائب أول باطنية",
       "issueDate": "2026-07-30",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26080569278",
+      "serviceCode": "PSL26080569278",
+      "nationalId": "1122375429",
+      "idNumber": "1122375429",
+      "name": "عبدالله احمد بن خاتم المالكي",
+      "admissionDate": "2026-08-02",
+      "dischargeDate": "2026-08-02",
+      "leaveDuration": "1",
+      "doctorName": "أشرف شعبان محفوظ",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-08-02",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
