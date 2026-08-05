@@ -573,6 +573,20 @@
       "jobTitle": "استشاري باطنية ",
       "issueDate": "2026-08-04",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26080566431",
+      "serviceCode": "GSL26080566431",
+      "nationalId": "1122745571",
+      "idNumber": "1122745571",
+      "name": "علي سعيد الكثير",
+      "admissionDate": "2026-08-06",
+      "dischargeDate": "2026-08-06",
+      "leaveDuration": "1",
+      "doctorName": "عاصم الشريف",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-08-06",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
