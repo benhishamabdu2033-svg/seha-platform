@@ -587,6 +587,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-08-06",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26080591956",
+      "serviceCode": "GSL26080591956",
+      "nationalId": "1153370976",
+      "idNumber": "1153370976",
+      "name": "غزل غازي غازي ",
+      "admissionDate": "2026-08-05",
+      "dischargeDate": "2026-08-05",
+      "leaveDuration": "1",
+      "doctorName": "ياسر المحمدي",
+      "jobTitle": "نائب أول باطنية",
+      "issueDate": "2026-08-05",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
