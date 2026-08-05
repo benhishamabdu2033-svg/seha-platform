@@ -615,6 +615,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-08-06",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26080519948",
+      "serviceCode": "PSL26080519948",
+      "nationalId": "1094180682",
+      "idNumber": "1094180682",
+      "name": "وليد عبدالله مصلح الشمراني",
+      "admissionDate": "2026-07-15",
+      "dischargeDate": "2026-07-15",
+      "leaveDuration": "1",
+      "doctorName": "سميرة عبدالعزيز",
+      "jobTitle": "طبيب عام طب عام",
+      "issueDate": "2026-07-15",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
