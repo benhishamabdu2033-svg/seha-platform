@@ -629,6 +629,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-08-05",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26080662695",
+      "serviceCode": "GSL26080662695",
+      "nationalId": "1113315491",
+      "idNumber": "1113315491",
+      "name": "علي يحيى صالح الزهراني",
+      "admissionDate": "2026-08-06",
+      "dischargeDate": "2026-08-06",
+      "leaveDuration": "1",
+      "doctorName": "سلطان القرشي",
+      "jobTitle": "طبيب باطنية",
+      "issueDate": "2026-08-06",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
