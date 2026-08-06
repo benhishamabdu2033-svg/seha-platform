@@ -615,6 +615,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-07-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26080622281",
+      "serviceCode": "GSL26080622281",
+      "nationalId": "1104432396",
+      "idNumber": "1104432396",
+      "name": "سيف زامل علي خزاعي ",
+      "admissionDate": "2026-08-05",
+      "dischargeDate": "2026-08-05",
+      "leaveDuration": "1",
+      "doctorName": "تركي الهذلي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-08-05",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
