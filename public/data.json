@@ -643,6 +643,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-07-29",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26080712036",
+      "serviceCode": "PSL26080712036",
+      "nationalId": "1115837344",
+      "idNumber": "1115837344",
+      "name": "اميره الاسمري",
+      "admissionDate": "2026-08-08",
+      "dischargeDate": "2026-08-09",
+      "leaveDuration": "2",
+      "doctorName": "اغابي فادي يوسف باخوم",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-08-09",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
