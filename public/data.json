@@ -685,6 +685,20 @@
       "jobTitle": "استشاري ",
       "issueDate": "2026-08-06",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26080826691",
+      "serviceCode": "GSL26080826691",
+      "nationalId": "1114633066",
+      "idNumber": "1114633066",
+      "name": "وجدان محمد سلمان الجذمي",
+      "admissionDate": "2026-08-08",
+      "dischargeDate": "2026-08-08",
+      "leaveDuration": "1",
+      "doctorName": "عاصم الشريف",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-08-08",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
