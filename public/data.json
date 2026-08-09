@@ -699,6 +699,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-08-08",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26080934444",
+      "serviceCode": "GSL26080934444",
+      "nationalId": "1074833003",
+      "idNumber": "1074833003",
+      "name": "روان بدر علي",
+      "admissionDate": "2026-08-09",
+      "dischargeDate": "2026-08-09",
+      "leaveDuration": "1",
+      "doctorName": "سامي إبراهيم العمري",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-08-09",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
