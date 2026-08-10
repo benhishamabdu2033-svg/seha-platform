@@ -741,6 +741,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-08-10",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26081020392",
+      "serviceCode": "GSL26081020392",
+      "nationalId": "1153370976",
+      "idNumber": "1153370976",
+      "name": "غزل غازي غازي الحربي",
+      "admissionDate": "2026-08-10",
+      "dischargeDate": "2026-08-10",
+      "leaveDuration": "1",
+      "doctorName": "ياسر المحمدي",
+      "jobTitle": "نائب أول باطنية",
+      "issueDate": "2026-08-10",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
