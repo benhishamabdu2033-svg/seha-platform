@@ -769,6 +769,20 @@
       "jobTitle": "نائب أول باطنية",
       "issueDate": "2026-07-23",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26081059388",
+      "serviceCode": "GSL26081059388",
+      "nationalId": "1074833003",
+      "idNumber": "1074833003",
+      "name": "روان بدر علي",
+      "admissionDate": "2026-08-10",
+      "dischargeDate": "2026-08-10",
+      "leaveDuration": "1",
+      "doctorName": "سامي إبراهيم العمري",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-08-10",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
