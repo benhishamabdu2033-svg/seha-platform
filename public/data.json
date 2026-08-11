@@ -839,6 +839,20 @@
       "jobTitle": "استشاري ",
       "issueDate": "2026-08-11",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26081293177",
+      "serviceCode": "GSL26081293177",
+      "nationalId": "1124198563",
+      "idNumber": "1124198563",
+      "name": "روان عادل صبار العنزي ",
+      "admissionDate": "2026-08-12",
+      "dischargeDate": "2026-08-12",
+      "leaveDuration": "1",
+      "doctorName": "ظفر إقبال",
+      "jobTitle": "استشاري",
+      "issueDate": "2026-08-12",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
