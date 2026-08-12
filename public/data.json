@@ -909,6 +909,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-08-12",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26081255076",
+      "serviceCode": "GSL26081255076",
+      "nationalId": "1074114746",
+      "idNumber": "1074114746",
+      "name": "احلام زبن علي السلمي",
+      "admissionDate": "2026-08-12",
+      "dischargeDate": "2026-08-12",
+      "leaveDuration": "1",
+      "doctorName": "تركي الهذلي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-08-12",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
