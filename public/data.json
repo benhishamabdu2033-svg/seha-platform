@@ -867,6 +867,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-08-12",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26081252555",
+      "serviceCode": "GSL26081252555",
+      "nationalId": "1087715205",
+      "idNumber": "1087715205",
+      "name": "متعب محمد صالح الدوسري",
+      "admissionDate": "2026-08-12",
+      "dischargeDate": "2026-08-12",
+      "leaveDuration": "1",
+      "doctorName": "فيصل العنزي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-08-12",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
