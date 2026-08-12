@@ -853,6 +853,20 @@
       "jobTitle": "استشاري",
       "issueDate": "2026-08-12",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26081252659",
+      "serviceCode": "GSL26081252659",
+      "nationalId": "1117640100",
+      "idNumber": "1117640100",
+      "name": "ابراهيم امين ابراهيم مؤذن ",
+      "admissionDate": "2026-08-12",
+      "dischargeDate": "2026-08-12",
+      "leaveDuration": "1",
+      "doctorName": "عاصم الشريف",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-08-12",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
