@@ -594,7 +594,10 @@ const db = [
 { id: 335, name: "عادل سعد", nameEn: "Adel Saad", degree: "طبيب", degreeEn: "Physician", specialty: "جراحة عامة", specialtyEn: "General Surgery", hospital: "مستوصف الملحم", hospitalEn: "Al Mulhim Medical Complex", hospitalType: "خاص", region: "الشرقية - الأحساء", hospitalLogo: "https://i.postimg.cc/MH1mQD5r/1786562914343.png", hospitalLic: "رقم الترخيص: 1331101201210030" },
 { id: 336, name: "توفيق العدل", nameEn: "Tawfiq Al-Adl", degree: "استشاري", degreeEn: "Consultant", specialty: "طب عام", specialtyEn: "", hospital: "مستوصف الملحم", hospitalEn: "Al Mulhim Medical Complex", hospitalType: "خاص", region: "الشرقية - الأحساء", hospitalLogo: "https://i.postimg.cc/MH1mQD5r/1786562914343.png", hospitalLic: "رقم الترخيص: 1331101201210030" },
 { id: 337, name: "جمال", nameEn: "Jamal", degree: "طبيب", degreeEn: "", specialty: "عام", specialtyEn: "General", hospital: "مستوصف الملحم", hospitalEn: "Al Mulhim Medical Complex", hospitalType: "خاص", region: "الشرقية - الأحساء", hospitalLogo: "https://i.postimg.cc/MH1mQD5r/1786562914343.png", hospitalLic: "رقم الترخيص: 1331101201210030" },
+    // ==================== الرياض - مجمع نوفا الدولي الطبي ====================
+{ id: 338, name: "رانيا محمود رجب مرعي", nameEn: "Rania Mahmoud Ragab Mar'i", degree: "طبيب عام", degreeEn: "General Practitioner", specialty: "طب عام", specialtyEn: "General Medicine", hospital: "مجمع نوفا الدولي الطبي", hospitalEn: "Nova International Medical", hospitalType: "خاص", region: "جدة - حي القرينية", hospitalLogo: "https://i.postimg.cc/cLDkRwZ5/IMG-20260815-WA0001.jpg", hospitalLic: "رقم الترخيص: 2600036044" },
    ];
+
     function initFilters() {
         const regions = [...new Set(db.map(d => d.region))].filter(Boolean).sort();
         const regSel = document.getElementById('selRegion');
