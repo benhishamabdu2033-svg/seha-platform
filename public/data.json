@@ -923,6 +923,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-08-12",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26081419623",
+      "serviceCode": "PSL26081419623",
+      "nationalId": "1099874941",
+      "idNumber": "1099874941",
+      "name": "هند عبد الكريم العنزي ",
+      "admissionDate": "2026-08-14",
+      "dischargeDate": "2026-08-14",
+      "leaveDuration": "1",
+      "doctorName": "مروة فاروق",
+      "jobTitle": "أخصائية باطنة",
+      "issueDate": "2026-08-14",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
