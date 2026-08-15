@@ -993,6 +993,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-08-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26081548902",
+      "serviceCode": "PSL26081548902",
+      "nationalId": "1059176774",
+      "idNumber": "1059176774",
+      "name": "رشا بدر علي كوكو",
+      "admissionDate": "2026-08-15",
+      "dischargeDate": "2026-08-15",
+      "leaveDuration": "1",
+      "doctorName": "صفاء محمد قاسم القاسم",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-08-15",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
