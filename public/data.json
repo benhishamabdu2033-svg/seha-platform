@@ -1035,6 +1035,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-06-23",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26081677653",
+      "serviceCode": "GSL26081677653",
+      "nationalId": "1088773153",
+      "idNumber": "1088773153",
+      "name": "روان ناصر محمد ",
+      "admissionDate": "2026-08-14",
+      "dischargeDate": "2026-08-15",
+      "leaveDuration": "2",
+      "doctorName": "محمد المعاوي",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-08-15",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
