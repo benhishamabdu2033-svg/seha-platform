@@ -1007,6 +1007,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-08-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26081679063",
+      "serviceCode": "GSL26081679063",
+      "nationalId": "1076531613",
+      "idNumber": "1076531613",
+      "name": "اميره محمد زغفي ",
+      "admissionDate": "2026-08-16",
+      "dischargeDate": "2026-08-16",
+      "leaveDuration": "1",
+      "doctorName": "عاصم الشريف",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-08-16",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
