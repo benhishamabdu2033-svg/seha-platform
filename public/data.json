@@ -1063,6 +1063,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-08-17",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26081735045",
+      "serviceCode": "GSL26081735045",
+      "nationalId": "1051719167",
+      "idNumber": "1051719167",
+      "name": "مساعد عبدالله ابراهيم الصيخان",
+      "admissionDate": "2026-08-16",
+      "dischargeDate": "2026-08-16",
+      "leaveDuration": "1",
+      "doctorName": "سلمی محمد عيضه الحضري",
+      "jobTitle": "طبيب عام ",
+      "issueDate": "2026-08-16",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
