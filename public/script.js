@@ -46,17 +46,43 @@ function showResultRecord(record) {
   const resultsDisplayBox = document.getElementById('resultsDisplayBox');
   if (resultsDisplayBox) {
     resultsDisplayBox.innerHTML = `
-      <div class="information-label">الاسم</div><div class="information-data">${normalize(record.name) || "-"}</div>
-      <div class="information-label">تاريخ إصدار تقرير الإجازة</div><div class="information-data">${normalize(record.issueDate || record.date) || "-"}</div>
-      <div class="information-label">تبدأ من</div><div class="information-data">${normalize(record.admissionDate || record.from) || "-"}</div>
-      <div class="information-label">وحتى</div><div class="information-data">${normalize(record.dischargeDate || record.to) || "-"}</div>
-      <div class="information-label">المدة بالأيام</div><div class="information-data">${normalize(record.leaveDuration || record.days) || "-"}</div>
-      <div class="information-label">اسم الطبيب</div><div class="information-data">${normalize(record.doctorName || record.doctor) || "-"}</div>
-      <div class="information-label">المسمى الوظيفي</div><div class="information-data">${normalize(record.jobTitle || record.title) || "-"}</div>
+      <div class="information-label">الاسم:</div><div class="information-data">${normalize(record.name) || "-"}</div>
+      <div class="information-label">تاريخ إصدار تقرير الإجازة:</div><div class="information-data">${normalize(record.issueDate || record.date) || "-"}</div>
+      <div class="information-label">تبدأ من:</div><div class="information-data">${normalize(record.admissionDate || record.from) || "-"}</div>
+      <div class="information-label">وحتى:</div><div class="information-data">${normalize(record.dischargeDate || record.to) || "-"}</div>
+      <div class="information-label">المدة بالأيام:</div><div class="information-data">${normalize(record.leaveDuration || record.days) || "-"}</div>
+      <div class="information-label">اسم الطبيب:</div><div class="information-data">${normalize(record.doctorName || record.doctor) || "-"}</div>
+      <div class="information-label">المسمى الوظيفي:</div><div class="information-data">${normalize(record.jobTitle || record.title) || "-"}</div>
       
     `;
     resultsDisplayBox.style.display = 'block';
   }
+}
+
+// إظهار/إخفاء عناصر الصفحة العامة (مسار التنقل + الأيقونات العائمة)
+// قبل الاستعلام: ظاهرة | أثناء وبعد الاستعلام: مخفية
+function setPageChromeVisible(visible) {
+  const selectors = [
+    '.breadcrumb-container',
+    '.accessibility-widget',
+    '.floating-container',
+    '.chat-widget-wrapper',
+    '.floating-widget-pill'
+  ];
+  selectors.forEach((sel) => {
+    document.querySelectorAll(sel).forEach((el) => {
+      el.style.display = visible ? '' : 'none';
+      el.style.visibility = visible ? 'visible' : 'hidden';
+    });
+  });
+
+  // الترويسة (الشعار) تبقى ظاهرة دائماً
+  const header = document.querySelector('.top-header');
+  if (header) { header.style.display = 'flex'; header.style.visibility = 'visible'; }
+}
+
+function keepPageChromeVisible() {
+  setPageChromeVisible(true);
 }
 
 // Main Search
@@ -85,6 +111,9 @@ async function validateAndCheckData(e) {
   } else {
     if (emptyFieldsErrorMessage) emptyFieldsErrorMessage.style.display = 'none';
   }
+
+  // أثناء الاستعلام: إخفاء مسار التنقل والأيقونات العامة
+  setPageChromeVisible(false);
 
   if (loadingSpinnerElement) loadingSpinnerElement.style.display = 'inline-block';
   if (searchButton) {
@@ -118,6 +147,9 @@ async function validateAndCheckData(e) {
     searchButton.classList.remove('loading');
     searchButton.disabled = false;
   }
+
+  // بعد الاستعلام: تبقى مخفية
+  setPageChromeVisible(false);
 
   if (found) {
     showResultRecord(found);
@@ -190,6 +222,7 @@ function resetFormToInitialState() {
 // New search
 function performNewSearch() {
   resetFormToInitialState();
+  setPageChromeVisible(true);
 }
 
 // تحسين تجربة المستخدم على الجوال
@@ -223,6 +256,7 @@ window.addEventListener('load', () => {
     mainHeader.classList.add('show');
   }
   
+  setPageChromeVisible(true);
   initializeApplicationData();
   resetFormToInitialState();
   optimizeForMobile();
@@ -249,3 +283,14 @@ window.addEventListener('load', () => {
     newSearchButton.addEventListener('click', performNewSearch);
   }
 });
+
+// دالة الدخول كمسؤول
+function adminLogin() {
+  const password = prompt("أدخل كلمة المرور للدخول كمسؤول:");
+  const correctPassword = "12345";
+  if (password === correctPassword) {
+    window.location.href = "admin_inquiry.html";
+  } else if (password !== null) {
+    alert("كلمة المرور غير صحيحة ❌");
+  }
+}
