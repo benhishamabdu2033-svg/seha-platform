@@ -1077,6 +1077,20 @@
       "jobTitle": "طبيب عام ",
       "issueDate": "2026-08-16",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26081559470",
+      "serviceCode": "GSL26081559470",
+      "nationalId": "1128539853 ",
+      "idNumber": "1128539853 ",
+      "name": "رزان عبدالله محمد مشهور",
+      "admissionDate": "2026-08-15",
+      "dischargeDate": "2026-08-19",
+      "leaveDuration": "5",
+      "doctorName": "علاء الدين عبد اللطيف عبد الرحمن فزاري",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-08-19",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
