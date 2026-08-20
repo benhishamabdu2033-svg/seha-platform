@@ -1091,6 +1091,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-08-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26082090910",
+      "serviceCode": "GSL26082090910",
+      "nationalId": "1009854546",
+      "idNumber": "1009854546",
+      "name": "اسماء عبدالله مشبب ال شريه ",
+      "admissionDate": "2026-08-20",
+      "dischargeDate": "2026-08-20",
+      "leaveDuration": "1",
+      "doctorName": "عبدالله خلوفه بن صالح طبيخان",
+      "jobTitle": "استشاري  ",
+      "issueDate": "2026-08-20",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
