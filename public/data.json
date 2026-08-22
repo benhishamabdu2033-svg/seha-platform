@@ -1133,6 +1133,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-08-23",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26082895678",
+      "serviceCode": "GSL26082895678",
+      "nationalId": "1110152467",
+      "idNumber": "1110152467",
+      "name": "سيف سعيد سيف آل جربوع",
+      "admissionDate": "2026-08-25",
+      "dischargeDate": "2026-09-20",
+      "leaveDuration": "27",
+      "doctorName": "حسين الشهراني",
+      "jobTitle": "طبيب عظام",
+      "issueDate": "2026-08-28",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
