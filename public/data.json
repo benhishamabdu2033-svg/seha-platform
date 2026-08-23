@@ -1161,6 +1161,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-08-18",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26082377971",
+      "serviceCode": "GSL26082377971",
+      "nationalId": "1141413169",
+      "idNumber": "1141413169",
+      "name": "المثنى محمد بن عبداالله الغفيص",
+      "admissionDate": "",
+      "dischargeDate": "",
+      "leaveDuration": "",
+      "doctorName": "عبداالله مفرح علي عسيري",
+      "jobTitle": "استشاري ",
+      "issueDate": "",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
