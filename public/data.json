@@ -1147,6 +1147,20 @@
       "jobTitle": "طبيب عظام",
       "issueDate": "2026-08-28",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26081825155",
+      "serviceCode": "PSL26081825155",
+      "nationalId": "1074114746",
+      "idNumber": "1074114746",
+      "name": "احلام زبن علي السلمي",
+      "admissionDate": "2026-08-18",
+      "dischargeDate": "2026-08-18",
+      "leaveDuration": "1",
+      "doctorName": "رضا بخش",
+      "jobTitle": "استشاري أمراض الباطنة",
+      "issueDate": "2026-08-18",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
