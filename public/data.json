@@ -1189,6 +1189,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-08-20",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26081347787",
+      "serviceCode": "PSL26081347787",
+      "nationalId": "1136258009",
+      "idNumber": "1136258009",
+      "name": "انجاد سعد يحيي القحطاني",
+      "admissionDate": "2026-08-13",
+      "dischargeDate": "2026-08-13",
+      "leaveDuration": "1",
+      "doctorName": "اغابي فادي يوسف باخوم",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-08-13",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
