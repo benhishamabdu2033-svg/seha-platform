@@ -1259,6 +1259,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-08-27",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26082810810",
+      "serviceCode": "PSL26082810810",
+      "nationalId": "2598065361",
+      "idNumber": "2598065361",
+      "name": "سيلين وليد عبلا",
+      "admissionDate": "2026-08-29",
+      "dischargeDate": "2026-08-29",
+      "leaveDuration": "1",
+      "doctorName": "عبدالرحمن إبراهيم السليم",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-08-29",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
