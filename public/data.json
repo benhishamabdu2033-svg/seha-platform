@@ -1273,6 +1273,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-08-29",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26083018712",
+      "serviceCode": "GSL26083018712",
+      "nationalId": "1115289744",
+      "idNumber": "1115289744",
+      "name": "بزه وكير كريم الظفيري",
+      "admissionDate": "2026-08-13",
+      "dischargeDate": "2026-08-14",
+      "leaveDuration": "2",
+      "doctorName": "هند محمد علي عثمان الشايف",
+      "jobTitle": "نائب باطنية",
+      "issueDate": "2026-08-14",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
