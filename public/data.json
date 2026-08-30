@@ -1301,6 +1301,20 @@
       "jobTitle": "نائب باطنية",
       "issueDate": "2026-08-14",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26083079294",
+      "serviceCode": "PSL26083079294",
+      "nationalId": "1112233893",
+      "idNumber": "1112233893",
+      "name": "نبراس علي الصليح",
+      "admissionDate": "2026-08-30",
+      "dischargeDate": "2026-08-30",
+      "leaveDuration": "1",
+      "doctorName": "أمير عبد الله خان",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-08-30",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
