@@ -1315,6 +1315,20 @@
       "jobTitle": "نائب باطنية",
       "issueDate": "2026-08-31",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26090583002",
+      "serviceCode": "PSL26090583002",
+      "nationalId": "1115837344",
+      "idNumber": "1115837344",
+      "name": "اميره الاسمري",
+      "admissionDate": "2026-08-05",
+      "dischargeDate": "2026-08-11",
+      "leaveDuration": "7",
+      "doctorName": "اغابي فادي يوسف باخوم",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-08-11",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
