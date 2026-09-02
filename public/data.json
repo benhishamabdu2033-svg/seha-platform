@@ -1357,6 +1357,20 @@
       "jobTitle": "أخصائي أول أسنان",
       "issueDate": "2026-09-01",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26090193632",
+      "serviceCode": "PSL26090193632",
+      "nationalId": "1072295353",
+      "idNumber": "1072295353",
+      "name": "هدى احمد الزهراني",
+      "admissionDate": "2026-09-01",
+      "dischargeDate": "2026-09-01",
+      "leaveDuration": "1",
+      "doctorName": "ربي صلاح",
+      "jobTitle": "أخصائي أول أسنان",
+      "issueDate": "2026-09-01",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
