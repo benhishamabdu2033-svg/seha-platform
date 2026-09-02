@@ -1329,6 +1329,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-11",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26090286752",
+      "serviceCode": "GSL26090286752",
+      "nationalId": "1131217018",
+      "idNumber": "1131217018",
+      "name": "ليلى علي احمد شريفي",
+      "admissionDate": "2026-09-03",
+      "dischargeDate": "2026-09-03",
+      "leaveDuration": "1",
+      "doctorName": "نبيل قاسم ثابت مثنی",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-09-03",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
