@@ -1371,6 +1371,20 @@
       "jobTitle": "أخصائي أول أسنان",
       "issueDate": "2026-09-01",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26090546416",
+      "serviceCode": "PSL26090546416",
+      "nationalId": "1092279833",
+      "idNumber": "1092279833",
+      "name": "عطيوي دخيل الله خاتم المالكي",
+      "admissionDate": "2026-09-05",
+      "dischargeDate": "2026-09-07",
+      "leaveDuration": "3",
+      "doctorName": "أكرم الشاعر",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-09-07",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
