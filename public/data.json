@@ -1385,6 +1385,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-09-07",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26090633406",
+      "serviceCode": "GSL26090633406",
+      "nationalId": "1156797225",
+      "idNumber": "1156797225",
+      "name": "رنين موسى علي قحل",
+      "admissionDate": "2026-09-01",
+      "dischargeDate": "2026-09-06",
+      "leaveDuration": "6",
+      "doctorName": "ياسر الشريف",
+      "jobTitle": "إداري عام ",
+      "issueDate": "2026-09-06",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
