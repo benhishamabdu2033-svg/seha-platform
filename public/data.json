@@ -1469,6 +1469,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-08-06",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26080642086",
+      "serviceCode": "GSL26080642086",
+      "nationalId": "1121862161",
+      "idNumber": "1121862161",
+      "name": "نجد سعد الشهراني",
+      "admissionDate": "2026-08-05",
+      "dischargeDate": "2026-08-06",
+      "leaveDuration": "2",
+      "doctorName": "هاني العمودي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-08-06",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
