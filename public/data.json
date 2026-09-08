@@ -1483,6 +1483,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-08-06",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26090898342",
+      "serviceCode": "GSL26090898342",
+      "nationalId": "2428618868",
+      "idNumber": "2428618868",
+      "name": "دلع عمار سليمان ",
+      "admissionDate": "2026-09-07",
+      "dischargeDate": "2026-09-07",
+      "leaveDuration": "1",
+      "doctorName": "هاني العمودي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-09-07",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
