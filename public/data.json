@@ -1511,6 +1511,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-07",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26091040611",
+      "serviceCode": "GSL26091040611",
+      "nationalId": "1052430822",
+      "idNumber": "1052430822",
+      "name": "موقفه فهد العتيبي ",
+      "admissionDate": "2026-09-10",
+      "dischargeDate": "2026-09-10",
+      "leaveDuration": "1",
+      "doctorName": "أحمد سليمان الجباري",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-09-10",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
