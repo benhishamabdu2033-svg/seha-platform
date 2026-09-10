@@ -1525,6 +1525,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-09-10",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26091552869",
+      "serviceCode": "GSL26091552869",
+      "nationalId": "1001567963",
+      "idNumber": "1001567963",
+      "name": "محمدعلي صبيح العمراني",
+      "admissionDate": "2026-09-14",
+      "dischargeDate": "2026-09-15",
+      "leaveDuration": "2",
+      "doctorName": "جبران على القحطاني",
+      "jobTitle": "أخصائي عام",
+      "issueDate": "2026-09-15",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
