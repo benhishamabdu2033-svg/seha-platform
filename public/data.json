@@ -1539,6 +1539,20 @@
       "jobTitle": "أخصائي عام",
       "issueDate": "2026-09-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26091237611",
+      "serviceCode": "GSL26091237611",
+      "nationalId": "2521607453",
+      "idNumber": "2521607453",
+      "name": "عبدالنور محمد عبدالنور ",
+      "admissionDate": "2026-09-12",
+      "dischargeDate": "2026-09-13",
+      "leaveDuration": "2",
+      "doctorName": "صالح التويجري",
+      "jobTitle": "نائب أول باطنية",
+      "issueDate": "2026-09-13",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
