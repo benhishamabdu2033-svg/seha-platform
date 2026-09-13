@@ -82,6 +82,8 @@
                 <select id="visitTypeAr" onchange="syncVisitType()">
                     <option value="المختبرات">المختبرات</option>
                     <option value="عيادات">عيادات</option>
+                    <option value="عيادات عظام">عيادات عظام</option>
+                    <option value="عيادة عظام">عيادة عظام</option>
                     <option value="تنويم">تنويم</option>
                     <option value="طوارئ">طوارئ</option>
                 </select>
@@ -91,7 +93,9 @@
                     <option value="Laboratory">Laboratory</option>
                     <option value="InPatient">InPatient</option>
                     <option value="Emergency">Emergency</option>
+                    <option value="Orthopedic Clinic">Orthopedic Clinic</option>
                     <option value="OutPatient">OutPatient</option>
+                    <option value="Orthopedic OutPatient">Orthopedic OutPatient</option>
                 </select>
             </div>
         </div>
@@ -611,6 +615,7 @@ function generate11Digits() {
 { id: 361, name: "وليد طه عبد الرحمن", nameEn: "Waleed Taha Abdulrahman", degree: "طبيب", degreeEn: "Physician", specialty: "باطنية", specialtyEn: "Internal Medicine", hospital: "مجمع أماس الطبي", hospitalEn: "Amass Polyclinic Complex", hospitalType: "خاص", region: "الجوف", hospitalLogo: "https://i.postimg.cc/J4vn0WZr/1789232351580.png", hospitalLic: "رقم الترخيص: <span class='date-fix'>4610401209710009</span>" },
 { id: 362, name: "بدر عبد المصلح حسن", nameEn: "Badr Abdulmusleh Hassan", degree: "طبيب", degreeEn: "Physician", specialty: "طب أسنان عام", specialtyEn: "General Dentistry", hospital: "مجمع أماس الطبي", hospitalEn: "Amass Polyclinic Complex", hospitalType: "خاص", region: "الجوف", hospitalLogo: "https://i.postimg.cc/J4vn0WZr/1789232351580.png", hospitalLic: "رقم الترخيص: <span class='date-fix'>4610401209710009</span>" },
 { id: 363, name: "علي هواري", nameEn: "Ali Hawari", degree: "أخصائي", degreeEn: "Specialist", specialty: "الأمراض الباطنية", specialtyEn: "Internal Medicine", hospital: "مجمع أماس الطبي", hospitalEn: "Amass Polyclinic Complex", hospitalType: "خاص", region: "الجوف", hospitalLogo: "https://i.postimg.cc/J4vn0WZr/1789232351580.png", hospitalLic: "رقم الترخيص: <span class='date-fix'>4610401209710009</span>" },
+{ id: 147, name: "أحمد عنيزان الشمري", nameEn: "Ahmed Anizan Al Shammari", degree: "استشاري", degreeEn: "Consultant", specialty: "عظام", specialtyEn: "", hospital: "مستشفى الملك سلمان التخصصي", hospitalEn: "King Salman Specialist Hospital", hospitalType: "حكومي", region: "حائل" },
 ]; 
 
     function initFilters() {
@@ -732,7 +737,7 @@ function generate11Digits() {
     }
 
     function syncVisitType() {
-        const map = { "المختبرات": "Laboratory", "تنويم": "InPatient", "طوارئ": "Emergency" , "عيادات": "OutPatient" };
+        const map = { "المختبرات": "Laboratory", "تنويم": "InPatient", "طوارئ": "Emergency", "عيادات": "OutPatient", "عيادات عظام": "Orthopedic OutPatient", "عظام": "Orthopedic", "عيادة عظام": "Orthopedic Clinic" };
         const ar = document.getElementById('visitTypeAr').value;
         document.getElementById('visitTypeEn').value = map[ar] || "OutPatient";
     }
@@ -902,6 +907,55 @@ function generate11Digits() {
         const time = now.toTimeString().split(' ')[0].substring(0, 5);
         document.getElementById("printDateTime").value = `${date}T${time}`;
     };
+    </script>
+
+<!-- ===== ترجمة اسم المريض تلقائيًا ===== -->
+<script>
+(function () {
+  var TRANSLIT_API = "https://project--6b83fb03-6983-487e-a01c-ffd2462254ac-dev.lovable.app/api/public/translit";
+  var MAP = {"\u0627":"a","\u0623":"a","\u0625":"i","\u0622":"a","\u0628":"b","\u062a":"t","\u062b":"th","\u062c":"j","\u062d":"h","\u062e":"kh","\u062f":"d","\u0630":"th","\u0631":"r","\u0632":"z","\u0633":"s","\u0634":"sh","\u0635":"s","\u0636":"d","\u0637":"t","\u0638":"z","\u0639":"a","\u063a":"gh","\u0641":"f","\u0642":"q","\u0643":"k","\u0644":"l","\u0645":"m","\u0646":"n","\u0647":"h","\u0629":"h","\u0648":"w","\u064a":"y","\u0649":"a","\u0621":"","\u0626":"e","\u0624":"o"};
+  var COMMON = {
+    'محمد':'Mohammed','أحمد':'Ahmed','احمد':'Ahmed','خالد':'Khalid','هشام':'Hisham','اميره':'Amirah','الاسمري':'Alasmari','فادي':'Fadi','اغابي':'Aghapy',
+    'سعد':'Saad','سعود':'Saud','فيصل':'Faisal','سلطان':'Sultan','ماجد':'Majid','تركي':'Turki','نواف':'Nawaf','فهد':'Fahd','بندر':'Bandar','سلمان':'Salman','يوسف':'Youssef','عمر':'Omar','ياسر':'Yasser','طارق':'Tariq','بدر':'Badr','علي':'Ali','حسن':'Hassan','حسين':'Hussein','صالح':'Saleh','عيسى':'Issa','موسى':'Musa','ريان':'Rayan','زياد':'Ziyad','ابراهيم':'Ibrahim',
+    'عبدالله':'Abdullah','عبدالرحمن':'Abdulrahman','عبدالعزيز':'Abdulaziz','عبدالكريم':'Abdulkarim','عبدالمجيد':'Abdulmajid','عبدالوهاب':'Abdulwahab','عبداللطيف':'Abdullatif','عبدالقادر':'Abdulqader','عبدالاله':'Abdullah',
+    'يحيى':'Yahya','يحي':'Yahya','عبده':'Abdu','مصطفى':'Mustafa','مصطفي':'Mustafa','محمود':'Mahmoud','صلاح':'Salah','صلاح الدين':'Salahaldeen','مساعد':'Mosaed','مسفر':'Mesfer','مشعل':'Meshal','متعب':'Motaab','نايف':'Naif','ناصر':'Nasser','منصور':'Mansour','ممدوح':'Mamdouh','مفلح':'Mefleh','مبارك':'Mubarak','سالم':'Salem','غانم':'Ghanem','عوض':'Awadh','عايض':'Ayed','راشد':'Rashed','راجح':'Rajeh','فايز':'Fayez','فواز':'Fawaz','ثامر':'Thamer','جابر':'Jaber','جاسم':'Jassim','حاتم':'Hatem','حمد':'Hamad','حمود':'Hamoud','سعيد':'Saeed','سعدون':'Saadoun','نادر':'Nader','عثمان':'Othman','عريبي':'Oribi','شروق':'Shrouq','المدني':'Almadani','مدني':'Madani','باسل':'Basil','انديجاني':'Andejani','الدين':'Aldeen','ال':'Al',
+    'فاطمة':'Fatimah','فاطمه':'Fatimah','نورة':'Noura','نوره':'Noura','سارة':'Sarah','منى':'Mona','هند':'Hind','لمى':'Lama','ريم':'Reem','دانة':'Dana','جواهر':'Jawaher','مريم':'Maryam','عائشة':'Aisha','أسماء':'Asma','لطيفة':'Latifah','أمل':'Amal','هيا':'Haya','خديجة':'Khadijah','زينب':'Zainab','رقية':'Ruqayyah','جوهرة':'Jawhara',
+    'العتيبي':'Alotaibi','القحطاني':'Alqahtani','الغامدي':'Alghamdi','الشمري':'Alshammari','الحربي':'Alharbi','الدوسري':'Aldosari','المطيري':'Almutairi','الزهراني':'Alzahrani','السبيعي':'Alsubaie','العنزي':'Alanazi','العمري':'Alomari','الخالدي':'Alkhaldi','المالكي':'Almalki','الجهني':'Aljuhani','الشهري':'Alshehri','العسيري':'Alasiri','السالم':'Alsalem','الحمد':'Alhamad','اليحيى':'Alyahya','الظفيري':'Aldhafeeri'
+  };
+  function localTranslit(t) {
+    return String(t || '').replace(/[\u064b-\u0652\u0640]/g, '').trim().split(/\s+/).map(function (w) {
+      if (COMMON[w]) return COMMON[w];
+      var o = ''; for (var i = 0; i < w.length; i++) o += (MAP[w[i]]!== undefined? MAP[w[i]] : w[i]);
+      return o? o[0].toUpperCase() + o.slice(1) : '';
+    }).filter(Boolean).join(' ');
+  }
+  function bind() {
+    var ar = document.getElementById('nameAr'), en = document.getElementById('nameEn');
+    if (!ar ||!en) return;
+    var edited = false, timer = null;
+    en.addEventListener('input', function () { edited = true; });
+    ar.addEventListener('input', function () {
+      if (edited) return;
+      var v = ar.value.trim();
+      var local = localTranslit(v);
+      en.value = local;
+      clearTimeout(timer);
+      if (!v) return;
+      timer = setTimeout(function () {
+        fetch(TRANSLIT_API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: v }) })
+       .then(function (r) { return r.json(); })
+       .then(function (d) {
+          if (!d ||!d.name_en || edited || ar.value.trim()!== v) return;
+          if (v.split(/\s+/).some(function(w){ return COMMON[w]; })) return;
+          en.value = d.name_en;
+        }).catch(function () {});
+      }, 500);
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bind); else bind();
+})();
 </script>
 </body>
 </html>
+
+
