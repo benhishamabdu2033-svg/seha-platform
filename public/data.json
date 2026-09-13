@@ -1609,6 +1609,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-09-07",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26090623601",
+      "serviceCode": "GSL26090623601",
+      "nationalId": "1122595075",
+      "idNumber": "1122595075",
+      "name": "روان عبدالعزيز الرشيدي ",
+      "admissionDate": "2026-09-06",
+      "dischargeDate": "2026-09-06",
+      "leaveDuration": "1",
+      "doctorName": "أحمد عنيزان الشمري",
+      "jobTitle": "استشاري عظام",
+      "issueDate": "2026-09-06",
+      "leaveType": "مشهد مراجعة"
     }
   ]
 }
