@@ -1611,34 +1611,6 @@
       "leaveType": "إجازة مرضية"
     },
     {
-      "leaveCode": "GSL26090623601",
-      "serviceCode": "GSL26090623601",
-      "nationalId": "1122595075",
-      "idNumber": "1122595075",
-      "name": "روان عبدالعزيز الرشيدي ",
-      "admissionDate": "2026-09-06",
-      "dischargeDate": "2026-09-06",
-      "leaveDuration": "1",
-      "doctorName": "أحمد عنيزان الشمري",
-      "jobTitle": "استشاري عظام",
-      "issueDate": "2026-09-06",
-      "leaveType": "مشهد مراجعة"
-    },
-    {
-      "leaveCode": "GSL26091390890",
-      "serviceCode": "GSL26091390890",
-      "nationalId": "1122595075",
-      "idNumber": "1122595075",
-      "name": "روان عبدالعزيز الرشيدي",
-      "admissionDate": "2026-09-13",
-      "dischargeDate": "2026-09-13",
-      "leaveDuration": "1",
-      "doctorName": "أحمد عنيزان الشمري",
-      "jobTitle": "استشاري عظام",
-      "issueDate": "2026-09-13",
-      "leaveType": "مشهد مراجعة"
-    },
-    {
       "leaveCode": "GSL26091422937",
       "serviceCode": "GSL26091422937",
       "nationalId": "1135429726 ",
@@ -1663,20 +1635,6 @@
       "leaveDuration": "2",
       "doctorName": "سماح حامد بابكر علي",
       "jobTitle": "طبيب عام",
-      "issueDate": "2026-09-14",
-      "leaveType": "إجازة مرضية"
-    },
-    {
-      "leaveCode": "GSL26091426587",
-      "serviceCode": "GSL26091426587",
-      "nationalId": "1117640100",
-      "idNumber": "1117640100",
-      "name": "إبراهيم أمين إبراهيم مؤذن ",
-      "admissionDate": "2026-09-14",
-      "dischargeDate": "2026-09-14",
-      "leaveDuration": "1",
-      "doctorName": "ماجد البلوي",
-      "jobTitle": "نائب أول باطنية",
       "issueDate": "2026-09-14",
       "leaveType": "إجازة مرضية"
     },
