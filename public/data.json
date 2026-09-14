@@ -1665,6 +1665,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-13",
       "leaveType": "مشهد مراجعة"
+    },
+    {
+      "leaveCode": "GSL26091594472",
+      "serviceCode": "GSL26091594472",
+      "nationalId": "2490461262",
+      "idNumber": "2490461262",
+      "name": "عزام مرتضي علي",
+      "admissionDate": "2026-09-14",
+      "dischargeDate": "2026-09-14",
+      "leaveDuration": "1",
+      "doctorName": "فيصل العنزي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-09-14",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
