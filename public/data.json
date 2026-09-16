@@ -1707,6 +1707,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-09-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26090219015",
+      "serviceCode": "GSL26090219015",
+      "nationalId": "1142951951",
+      "idNumber": "1142951951",
+      "name": "علي حسين عبدالله المحمود",
+      "admissionDate": "2026-09-02",
+      "dischargeDate": "2026-09-02",
+      "leaveDuration": "1",
+      "doctorName": "مؤيد محمد الشخل",
+      "jobTitle": "طبيب باطنية",
+      "issueDate": "2026-09-02",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
