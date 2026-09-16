@@ -1763,6 +1763,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-10",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26091086955",
+      "serviceCode": "PSL26091086955",
+      "nationalId": "1094180682",
+      "idNumber": "1094180682",
+      "name": "وليد عبدالله مصلح الشمراني",
+      "admissionDate": "2026-09-10",
+      "dischargeDate": "2026-09-10",
+      "leaveDuration": "1",
+      "doctorName": "سميرة عبدالعزيز",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-09-10",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
