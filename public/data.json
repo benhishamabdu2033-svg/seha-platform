@@ -1777,6 +1777,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-10",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26091748732",
+      "serviceCode": "GSL26091748732",
+      "nationalId": "1140317577",
+      "idNumber": "1140317577",
+      "name": "العالية عبدالرحمن الشثري",
+      "admissionDate": "2026-09-17",
+      "dischargeDate": "2026-09-17",
+      "leaveDuration": "1",
+      "doctorName": "فيصل العنزي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-09-17",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
