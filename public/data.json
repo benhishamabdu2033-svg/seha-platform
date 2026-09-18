@@ -1791,6 +1791,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-09-17",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26091817962",
+      "serviceCode": "PSL26091817962",
+      "nationalId": "1025694124",
+      "idNumber": "1025694124",
+      "name": "رضا عيد العتيبي ",
+      "admissionDate": "2026-09-19",
+      "dischargeDate": "2026-09-19",
+      "leaveDuration": "1",
+      "doctorName": "فرح شريجي",
+      "jobTitle": "طبيبة أسنان عامة",
+      "issueDate": "2026-09-19",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
