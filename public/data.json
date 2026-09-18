@@ -1805,6 +1805,20 @@
       "jobTitle": "طبيبة أسنان عامة",
       "issueDate": "2026-09-19",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26091870610",
+      "serviceCode": "PSL26091870610",
+      "nationalId": "1099874941",
+      "idNumber": "1099874941",
+      "name": "هند عبد الكريم العنزي ",
+      "admissionDate": "2026-09-15",
+      "dischargeDate": "2026-09-15",
+      "leaveDuration": "1",
+      "doctorName": "مروة فاروق",
+      "jobTitle": "أخصائية باطنة",
+      "issueDate": "2026-09-15",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
