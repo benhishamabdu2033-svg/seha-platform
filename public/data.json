@@ -1833,6 +1833,20 @@
       "jobTitle": "نائب أول باطنية",
       "issueDate": "2026-09-17",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26091954285",
+      "serviceCode": "GSL26091954285",
+      "nationalId": "1152282685",
+      "idNumber": "1152282685",
+      "name": "تولين امين ابراهيم مؤذن",
+      "admissionDate": "2026-09-17",
+      "dischargeDate": "2026-09-17",
+      "leaveDuration": "1",
+      "doctorName": "يوسف الرشيدي",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-09-17",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
