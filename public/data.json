@@ -1819,6 +1819,20 @@
       "jobTitle": "أخصائية باطنة",
       "issueDate": "2026-09-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26091767242",
+      "serviceCode": "GSL26091767242",
+      "nationalId": "1168102695 ",
+      "idNumber": "1168102695 ",
+      "name": "محمود امين ابراهيم مؤذن",
+      "admissionDate": "2026-09-17",
+      "dischargeDate": "2026-09-19",
+      "leaveDuration": "3",
+      "doctorName": "ماجد البلوي",
+      "jobTitle": "نائب أول باطنية",
+      "issueDate": "2026-09-19",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
