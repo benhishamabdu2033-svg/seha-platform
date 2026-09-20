@@ -1847,6 +1847,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-17",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26092037862",
+      "serviceCode": "GSL26092037862",
+      "nationalId": "1142777307",
+      "idNumber": "1142777307",
+      "name": "ياسر عيسى سفر المطيري ",
+      "admissionDate": "2026-09-20",
+      "dischargeDate": "2026-09-20",
+      "leaveDuration": "1",
+      "doctorName": "عادل التواب",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-09-20",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
