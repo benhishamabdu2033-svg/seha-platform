@@ -1861,6 +1861,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-09-20",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26092072218",
+      "serviceCode": "GSL26092072218",
+      "nationalId": "1130640608",
+      "idNumber": "1130640608",
+      "name": "عبدالعزيز فايز العنزي ",
+      "admissionDate": "2026-09-20",
+      "dischargeDate": "2026-09-20",
+      "leaveDuration": "1",
+      "doctorName": "جلاوي بن سعود المسعود",
+      "jobTitle": "أخصائي عيون",
+      "issueDate": "2026-09-20",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
