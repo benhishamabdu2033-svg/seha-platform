@@ -1889,6 +1889,21 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-21",
       "leaveType": "إجازة مرضية"
+      
+    },
+    {
+      "leaveCode": "GSL26092224938",
+      "serviceCode": "GSL26092224938",
+      "nationalId": "1118646817",
+      "idNumber": "1118646817",
+      "name": "ساره عيد البلوي",
+      "admissionDate": "2026-09-22",
+      "dischargeDate": "2026-09-22",
+      "leaveDuration": "1",
+      "doctorName": "إبراهيم محمد الدخيل",
+      "jobTitle": "طبيب عظام",
+      "issueDate": "2026-09-22",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
