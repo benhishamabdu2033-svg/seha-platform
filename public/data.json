@@ -1889,7 +1889,6 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-21",
       "leaveType": "إجازة مرضية"
-      
     },
     {
       "leaveCode": "GSL26092224938",
@@ -1903,6 +1902,20 @@
       "doctorName": "إبراهيم محمد الدخيل",
       "jobTitle": "طبيب عظام",
       "issueDate": "2026-09-22",
+      "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26090675105",
+      "serviceCode": "GSL26090675105",
+      "nationalId": "1122595075",
+      "idNumber": "1122595075",
+      "name": "روان عبدالعزيز بن عبيدالله الرشيدي",
+      "admissionDate": "2026-09-06",
+      "dischargeDate": "2026-09-06",
+      "leaveDuration": "1",
+      "doctorName": "عبدالرحمن يوسف عبدالرحمن الضو",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-09-06",
       "leaveType": "إجازة مرضية"
     }
   ]
