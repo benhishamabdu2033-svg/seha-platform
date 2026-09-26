@@ -1945,6 +1945,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26092624391",
+      "serviceCode": "GSL26092624391",
+      "nationalId": "1160877252",
+      "idNumber": "1160877252",
+      "name": "ليان مازن المطيري",
+      "admissionDate": "2026-09-22",
+      "dischargeDate": "2026-09-22",
+      "leaveDuration": "1",
+      "doctorName": "طلال الشهري",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-09-22",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
