@@ -1987,6 +1987,20 @@
       "jobTitle": "طيب عام",
       "issueDate": "2026-09-27",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26092783978",
+      "serviceCode": "GSL26092783978",
+      "nationalId": "1125468767",
+      "idNumber": "1125468767",
+      "name": "إبراهيم بيدر إبراهيم شقدار ",
+      "admissionDate": "2026-09-27",
+      "dischargeDate": "2026-09-27",
+      "leaveDuration": "1",
+      "doctorName": "عبدالله هيثم بن عبدالله بوقس",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-09-27",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
