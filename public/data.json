@@ -2001,6 +2001,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-27",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26090347177",
+      "serviceCode": "GSL26090347177",
+      "nationalId": "1066656206 ",
+      "idNumber": "1066656206 ",
+      "name": "أبرار زكريا بريسالي ",
+      "admissionDate": "2026-09-03",
+      "dischargeDate": "2026-09-03",
+      "leaveDuration": "1",
+      "doctorName": "أشجان الروقي",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-09-03",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
