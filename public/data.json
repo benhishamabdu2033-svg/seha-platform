@@ -2113,6 +2113,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-09-29",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26092967183",
+      "serviceCode": "GSL26092967183",
+      "nationalId": "1142464021",
+      "idNumber": "1142464021",
+      "name": "عبدالله احمد هاشم الزهراني",
+      "admissionDate": "2026-09-29",
+      "dischargeDate": "2026-09-29",
+      "leaveDuration": "1",
+      "doctorName": "يوسف الرشيدي",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-09-29",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
