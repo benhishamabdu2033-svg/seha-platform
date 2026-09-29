@@ -2073,17 +2073,17 @@
       "leaveType": "إجازة مرضية"
     },
     {
-      "leaveCode": "GSL26092734105",
-      "serviceCode": "GSL26092734105",
+      "leaveCode": "GSL26092934105",
+      "serviceCode": "GSL26092934105",
       "nationalId": "1138839160",
       "idNumber": "1138839160",
       "name": "عبدالله محمد عبدالله الجارالله ",
-      "admissionDate": "2026-09-27",
-      "dischargeDate": "2026-09-27",
+      "admissionDate": "2026-09-29",
+      "dischargeDate": "2026-09-29",
       "leaveDuration": "1",
       "doctorName": "أحمد سليمان الجباري",
       "jobTitle": "استشاري باطنية",
-      "issueDate": "2026-09-27",
+      "issueDate": "2026-09-29",
       "leaveType": "إجازة مرضية"
     }
   ]
