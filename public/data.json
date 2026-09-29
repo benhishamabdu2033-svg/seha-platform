@@ -2057,6 +2057,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-09-29",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26092936076",
+      "serviceCode": "GSL26092936076",
+      "nationalId": "1142525094",
+      "idNumber": "1142525094",
+      "name": "سامر ابراهيم محمد الزهراني",
+      "admissionDate": "2026-09-29",
+      "dischargeDate": "2026-09-29",
+      "leaveDuration": "1",
+      "doctorName": "طلال الشهري",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-09-29",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
