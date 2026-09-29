@@ -2085,6 +2085,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-09-29",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26092965270",
+      "serviceCode": "GSL26092965270",
+      "nationalId": "1223718634",
+      "idNumber": "1223718634",
+      "name": "ملاذ سلمان جابر سلامي",
+      "admissionDate": "2026-09-29",
+      "dischargeDate": "2026-09-29",
+      "leaveDuration": "1",
+      "doctorName": "حافظ ملحان",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-09-29",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
