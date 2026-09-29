@@ -2099,6 +2099,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-29",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26092949711",
+      "serviceCode": "GSL26092949711",
+      "nationalId": "1133288355",
+      "idNumber": "1133288355",
+      "name": "فراس امين ابراهيم مؤذن",
+      "admissionDate": "2026-09-29",
+      "dischargeDate": "2026-09-29",
+      "leaveDuration": "1",
+      "doctorName": "عاصم الشريف",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-09-29",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
