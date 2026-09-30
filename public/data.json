@@ -2155,6 +2155,20 @@
       "jobTitle": "نائب باطنية",
       "issueDate": "2026-08-31",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26090551212",
+      "serviceCode": "GSL26090551212",
+      "nationalId": "1045688999 ",
+      "idNumber": "1045688999 ",
+      "name": "مطيره متعب نفعون الرشيدي",
+      "admissionDate": "2026-09-05",
+      "dischargeDate": "2026-09-05",
+      "leaveDuration": "1",
+      "doctorName": "هند محمد علي عثمان الشايف",
+      "jobTitle": "نائب باطنية",
+      "issueDate": "2026-09-05",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
