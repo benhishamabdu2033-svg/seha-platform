@@ -2197,6 +2197,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-30",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26092966968",
+      "serviceCode": "GSL26092966968",
+      "nationalId": "1167340635",
+      "idNumber": "1167340635",
+      "name": "هند محمد علي القحطاني",
+      "admissionDate": "2026-09-29",
+      "dischargeDate": "2026-09-29",
+      "leaveDuration": "1",
+      "doctorName": "عاصم الشريف",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-09-29",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
