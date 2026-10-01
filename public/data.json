@@ -2267,6 +2267,20 @@
       "jobTitle": "طبيب عام ",
       "issueDate": "2026-10-01",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26100152711",
+      "serviceCode": "GSL26100152711",
+      "nationalId": "1135298204",
+      "idNumber": "1135298204",
+      "name": "محمد سعود العنزي",
+      "admissionDate": "2026-10-01",
+      "dischargeDate": "2026-10-01",
+      "leaveDuration": "1",
+      "doctorName": "فهد الرشيدي",
+      "jobTitle": "نائب أول عام",
+      "issueDate": "2026-10-01",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
