@@ -2253,6 +2253,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-10-01",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26100161141",
+      "serviceCode": "GSL26100161141",
+      "nationalId": "1120942634",
+      "idNumber": "1120942634",
+      "name": "شهد عمر سراج دمنهوري",
+      "admissionDate": "2026-10-01",
+      "dischargeDate": "2026-10-01",
+      "leaveDuration": "1",
+      "doctorName": "أحمد سليمان الجباري",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-10-01",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
