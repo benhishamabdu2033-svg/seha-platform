@@ -2211,6 +2211,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-09-29",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26100166736",
+      "serviceCode": "PSL26100166736",
+      "nationalId": "1156700476 ",
+      "idNumber": "1156700476 ",
+      "name": "ياسر عمار اليامي",
+      "admissionDate": "2026-10-01",
+      "dischargeDate": "2026-10-01",
+      "leaveDuration": "1",
+      "doctorName": "ساره خضر محمود علي",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-10-01",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
