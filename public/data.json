@@ -2281,6 +2281,20 @@
       "jobTitle": "نائب أول عام",
       "issueDate": "2026-10-01",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26093022389",
+      "serviceCode": "GSL26093022389",
+      "nationalId": "1135859948",
+      "idNumber": "1135859948",
+      "name": "محمد عثمان محمد الشهراني",
+      "admissionDate": "2026-09-30",
+      "dischargeDate": "2026-09-30",
+      "leaveDuration": "1",
+      "doctorName": "محمد المعاوي",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-09-30",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
