@@ -2309,6 +2309,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-10-04",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26100482929",
+      "serviceCode": "GSL26100482929",
+      "nationalId": "1148880188",
+      "idNumber": "1148880188",
+      "name": "محمد ماهر باعبود",
+      "admissionDate": "",
+      "dischargeDate": "",
+      "leaveDuration": "",
+      "doctorName": "ياسر المحمدي",
+      "jobTitle": "نائب أول باطنية",
+      "issueDate": "",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
