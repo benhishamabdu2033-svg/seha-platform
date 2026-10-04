@@ -2295,6 +2295,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-30",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26100491147",
+      "serviceCode": "PSL26100491147",
+      "nationalId": "1138597628",
+      "idNumber": "1138597628",
+      "name": "فوز زيد العتيبي ",
+      "admissionDate": "2026-10-04",
+      "dischargeDate": "2026-10-04",
+      "leaveDuration": "1",
+      "doctorName": "منى عبدالعزيز الحربي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-10-04",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
