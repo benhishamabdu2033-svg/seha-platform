@@ -2351,6 +2351,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-10-05",
       "leaveType": "مرافق"
+    },
+    {
+      "leaveCode": "GSL26092744450",
+      "serviceCode": "GSL26092744450",
+      "nationalId": "1132669589",
+      "idNumber": "1132669589",
+      "name": "لميس نواف جلوي الشمري",
+      "admissionDate": "2026-09-27",
+      "dischargeDate": "2026-09-27",
+      "leaveDuration": "1",
+      "doctorName": "أحمد سليمان الجباري",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-09-27",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
