@@ -2407,6 +2407,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-10-06",
       "leaveType": "مشهد مراجعة"
+    },
+    {
+      "leaveCode": "GSL26092939895",
+      "serviceCode": "GSL26092939895",
+      "nationalId": "1138839160",
+      "idNumber": "1138839160",
+      "name": "عبدالله محمد عبدالله الجارالله",
+      "admissionDate": "2026-09-29",
+      "dischargeDate": "2026-09-29",
+      "leaveDuration": "1",
+      "doctorName": "فهد الرشيدي",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-09-29",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
