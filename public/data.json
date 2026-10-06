@@ -2393,6 +2393,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-09-07",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26100699923",
+      "serviceCode": "GSL26100699923",
+      "nationalId": "1066060037",
+      "idNumber": "1066060037",
+      "name": "صالح محمد صالح اللزام ",
+      "admissionDate": "2026-10-06",
+      "dischargeDate": "2026-10-06",
+      "leaveDuration": "1",
+      "doctorName": "أحمد الحربي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-10-06",
+      "leaveType": "مشهد مراجعة"
     }
   ]
 }
