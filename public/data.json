@@ -2421,6 +2421,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-09-29",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26100879174",
+      "serviceCode": "PSL26100879174",
+      "nationalId": "1065673897",
+      "idNumber": "1065673897",
+      "name": "ايات جابر ناصر القطان ",
+      "admissionDate": "2026-10-08",
+      "dischargeDate": "2026-10-08",
+      "leaveDuration": "1",
+      "doctorName": "سارة الدوسري",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-10-08",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
