@@ -2505,6 +2505,20 @@
       "jobTitle": "أخصائي باطنية",
       "issueDate": "2026-10-14",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26101188005",
+      "serviceCode": "GSL26101188005",
+      "nationalId": "1116590181",
+      "idNumber": "1116590181",
+      "name": "علي سليمان محمد الجميل",
+      "admissionDate": "2026-10-11",
+      "dischargeDate": "2026-10-12",
+      "leaveDuration": "2",
+      "doctorName": "صالح التويجري",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-10-12",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
