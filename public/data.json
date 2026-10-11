@@ -2463,6 +2463,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-10-12",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26101133408",
+      "serviceCode": "PSL26101133408",
+      "nationalId": "1175154812 ",
+      "idNumber": "1175154812 ",
+      "name": "فهد عمار اليامي",
+      "admissionDate": "",
+      "dischargeDate": "",
+      "leaveDuration": "",
+      "doctorName": "ساره خضر محمود علي",
+      "jobTitle": "طبيب عام",
+      "issueDate": "",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
