@@ -2491,6 +2491,20 @@
       "jobTitle": "أخصائي باطنية",
       "issueDate": "2026-10-14",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26100565807",
+      "serviceCode": "GSL26100565807",
+      "nationalId": "1100490661",
+      "idNumber": "1100490661",
+      "name": "طارق حسين علي اليامي",
+      "admissionDate": "2026-10-04",
+      "dischargeDate": "2026-10-14",
+      "leaveDuration": "11",
+      "doctorName": "زياد البشيري",
+      "jobTitle": "أخصائي باطنية",
+      "issueDate": "2026-10-14",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
