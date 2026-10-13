@@ -2603,6 +2603,20 @@
       "jobTitle": "استشاري باطنية ",
       "issueDate": "2026-10-13",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26101366599",
+      "serviceCode": "GSL26101366599",
+      "nationalId": "1114902040",
+      "idNumber": "1114902040",
+      "name": "سعود حمد محمد حمدي",
+      "admissionDate": "2026-09-15",
+      "dischargeDate": "2026-09-29",
+      "leaveDuration": "15",
+      "doctorName": "نبيل قاسم ثابت مثنی",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-09-29",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
