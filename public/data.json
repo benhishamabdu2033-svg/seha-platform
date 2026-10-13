@@ -2589,6 +2589,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-09-26",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26101374843",
+      "serviceCode": "GSL26101374843",
+      "nationalId": "1138051097",
+      "idNumber": "1138051097",
+      "name": "عبدالرحمن مازن المطيري ",
+      "admissionDate": "2026-10-13",
+      "dischargeDate": "2026-10-13",
+      "leaveDuration": "1",
+      "doctorName": "باسم الحربي",
+      "jobTitle": "استشاري باطنية ",
+      "issueDate": "2026-10-13",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
