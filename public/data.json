@@ -2575,6 +2575,20 @@
       "jobTitle": "أخصائي باطنية ع",
       "issueDate": "2026-10-07",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26092643696",
+      "serviceCode": "GSL26092643696",
+      "nationalId": "1120175466",
+      "idNumber": "1120175466",
+      "name": "سلطان مبارك القحطاني",
+      "admissionDate": "2026-09-26",
+      "dischargeDate": "2026-09-26",
+      "leaveDuration": "1",
+      "doctorName": "فيصل العنزي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-09-26",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
