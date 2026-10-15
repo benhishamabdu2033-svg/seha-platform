@@ -2659,6 +2659,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-10-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26101588917",
+      "serviceCode": "GSL26101588917",
+      "nationalId": "1134612066",
+      "idNumber": "1134612066",
+      "name": "ليان سعود حران العنزي",
+      "admissionDate": "",
+      "dischargeDate": "",
+      "leaveDuration": "",
+      "doctorName": "عبد العزيز أبو المجد أبو سلامة ",
+      "jobTitle": "طبيب عام",
+      "issueDate": "",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
