@@ -2701,6 +2701,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-10-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26101523327",
+      "serviceCode": "PSL26101523327",
+      "nationalId": "1114902040",
+      "idNumber": "1114902040",
+      "name": "سعود حمد محمد حمدي",
+      "admissionDate": "2026-10-15",
+      "dischargeDate": "2026-10-15",
+      "leaveDuration": "1",
+      "doctorName": "اريج عبدالعزيز بن حسن فقيه",
+      "jobTitle": "استشاري ",
+      "issueDate": "2026-10-15",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
