@@ -2645,6 +2645,20 @@
       "jobTitle": "أخصائي عام",
       "issueDate": "2026-10-14",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26101566977",
+      "serviceCode": "GSL26101566977",
+      "nationalId": "1143376729",
+      "idNumber": "1143376729",
+      "name": "زياد هادي احمد عسيري ",
+      "admissionDate": "2026-10-14",
+      "dischargeDate": "2026-10-15",
+      "leaveDuration": "2",
+      "doctorName": "محمد آل فايع",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-10-15",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
