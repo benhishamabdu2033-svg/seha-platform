@@ -2715,6 +2715,20 @@
       "jobTitle": "استشاري ",
       "issueDate": "2026-10-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26101679365",
+      "serviceCode": "GSL26101679365",
+      "nationalId": "2498761424",
+      "idNumber": "2498761424",
+      "name": "جبران حميد علي حميد",
+      "admissionDate": "2026-10-16",
+      "dischargeDate": "2026-10-16",
+      "leaveDuration": "1",
+      "doctorName": "حسين حجلان",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-10-16",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
