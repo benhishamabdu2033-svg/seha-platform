@@ -2799,6 +2799,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-10-17",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26101564379",
+      "serviceCode": "GSL26101564379",
+      "nationalId": "1153647811",
+      "idNumber": "1153647811",
+      "name": "جنی نمر مطلع الحربي",
+      "admissionDate": "2026-10-15",
+      "dischargeDate": "2026-10-15",
+      "leaveDuration": "1",
+      "doctorName": "محمد الشمري",
+      "jobTitle": "عام  طبيب",
+      "issueDate": "2026-10-15",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
