@@ -2883,6 +2883,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-10-12",
       "leaveType": "مشهد مراجعة"
+    },
+    {
+      "leaveCode": "PSL26101946792",
+      "serviceCode": "PSL26101946792",
+      "nationalId": "1127910634",
+      "idNumber": "1127910634",
+      "name": "اصيل خالد عبدالرزاق الغامدي",
+      "admissionDate": "",
+      "dischargeDate": "",
+      "leaveDuration": "",
+      "doctorName": "دعاء مصطفى محمد شبانه",
+      "jobTitle": "أخصائي عام",
+      "issueDate": "",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
