@@ -2869,6 +2869,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-08-19",
       "leaveType": "مشهد مراجعة"
+    },
+    {
+      "leaveCode": "GSL26101276860",
+      "serviceCode": "GSL26101276860",
+      "nationalId": "1037172895",
+      "idNumber": "1037172895",
+      "name": "محمد عبدالعزيز محمد الحسون",
+      "admissionDate": "2026-10-12",
+      "dischargeDate": "2026-10-12",
+      "leaveDuration": "1",
+      "doctorName": "أحمد الحربي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-10-12",
+      "leaveType": "مشهد مراجعة"
     }
   ]
 }
