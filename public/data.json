@@ -2841,6 +2841,20 @@
       "jobTitle": "نائب أول باطنية",
       "issueDate": "2026-10-11",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26101976860",
+      "serviceCode": "GSL26101976860",
+      "nationalId": "1037172895",
+      "idNumber": "1037172895",
+      "name": "محمد عبدالعزيز محمد الحسون",
+      "admissionDate": "2026-09-19",
+      "dischargeDate": "2026-10-19",
+      "leaveDuration": "31",
+      "doctorName": "أحمد الحربي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "2026-10-19",
+      "leaveType": "مشهد مراجعة"
     }
   ]
 }
