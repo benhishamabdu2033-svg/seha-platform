@@ -2925,6 +2925,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-10-29",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26110120234",
+      "serviceCode": "GSL26110120234",
+      "nationalId": "1128972039",
+      "idNumber": "1128972039",
+      "name": "لجين احمد الغشمري",
+      "admissionDate": "",
+      "dischargeDate": "",
+      "leaveDuration": "",
+      "doctorName": "تركي الهذلي",
+      "jobTitle": "استشاري باطنية",
+      "issueDate": "",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
