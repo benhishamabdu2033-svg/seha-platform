@@ -2939,6 +2939,20 @@
       "jobTitle": "استشاري باطنية",
       "issueDate": "2026-11-01",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26110740366",
+      "serviceCode": "PSL26110740366",
+      "nationalId": "1154801284",
+      "idNumber": "1154801284",
+      "name": "ياسمين عبدالرحمن السفياني",
+      "admissionDate": "2026-10-18",
+      "dischargeDate": "2026-11-05",
+      "leaveDuration": "19",
+      "doctorName": "محمود خليفة",
+      "jobTitle": "طبيب باطنية",
+      "issueDate": "2026-11-05",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
