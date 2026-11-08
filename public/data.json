@@ -2967,6 +2967,20 @@
       "jobTitle": "أخصائي أول عام",
       "issueDate": "2026-11-08",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26110892839",
+      "serviceCode": "GSL26110892839",
+      "nationalId": "2215956026",
+      "idNumber": "2215956026",
+      "name": "احمد اشرف محمد الشرفاء",
+      "admissionDate": "2026-11-08",
+      "dischargeDate": "2026-11-08",
+      "leaveDuration": "1",
+      "doctorName": "عبدالله هيثم بن عبدالله بوقس",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-11-08",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
