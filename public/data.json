@@ -2953,6 +2953,20 @@
       "jobTitle": "طبيب باطنية",
       "issueDate": "2026-11-05",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26110833786",
+      "serviceCode": "GSL26110833786",
+      "nationalId": "1006534224",
+      "idNumber": "1006534224",
+      "name": "هيا عبد الرحمن حمد المنصور",
+      "admissionDate": "2026-11-08",
+      "dischargeDate": "2026-11-08",
+      "leaveDuration": "1",
+      "doctorName": "خالد مسلمي",
+      "jobTitle": "أخصائي مختبر",
+      "issueDate": "2026-11-08",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
