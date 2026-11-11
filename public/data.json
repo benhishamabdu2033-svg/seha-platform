@@ -2981,6 +2981,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-11-08",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26111237998",
+      "serviceCode": "GSL26111237998",
+      "nationalId": "2226563043",
+      "idNumber": "2226563043",
+      "name": "رماح محمد عبدالكريم البلوشي",
+      "admissionDate": "2026-11-12",
+      "dischargeDate": "2026-11-12",
+      "leaveDuration": "1",
+      "doctorName": "جبران على القحطاني",
+      "jobTitle": "أخصائي عام",
+      "issueDate": "2026-11-12",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
