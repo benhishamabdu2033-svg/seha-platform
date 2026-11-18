@@ -3009,6 +3009,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-11-19",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "PSL26111865074",
+      "serviceCode": "PSL26111865074",
+      "nationalId": "1170184350",
+      "idNumber": "1170184350",
+      "name": "يزن عمار اليامي",
+      "admissionDate": "2026-11-18",
+      "dischargeDate": "2026-11-19",
+      "leaveDuration": "2",
+      "doctorName": "ساره خضر محمود علي",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-11-19",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
