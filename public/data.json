@@ -3037,6 +3037,20 @@
       "jobTitle": "طبيب عام",
       "issueDate": "2026-11-19",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26111998112",
+      "serviceCode": "GSL26111998112",
+      "nationalId": "1006045106",
+      "idNumber": "1006045106",
+      "name": "رزان بدر علي ",
+      "admissionDate": "2026-11-19",
+      "dischargeDate": "2026-11-19",
+      "leaveDuration": "1",
+      "doctorName": "سخر ابو الفيصل",
+      "jobTitle": "طبيب عام",
+      "issueDate": "2026-11-19",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
