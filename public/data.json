@@ -3149,6 +3149,20 @@
       "jobTitle": "إداري عام ",
       "issueDate": "2026-11-15",
       "leaveType": "إجازة مرضية"
+    },
+    {
+      "leaveCode": "GSL26111934532",
+      "serviceCode": "GSL26111934532",
+      "nationalId": "1156797225",
+      "idNumber": "1156797225",
+      "name": "رنين موسى علي قحل",
+      "admissionDate": "2026-11-19",
+      "dischargeDate": "2026-11-19",
+      "leaveDuration": "1",
+      "doctorName": "ياسر الشريف",
+      "jobTitle": "إداري عام ",
+      "issueDate": "2026-11-19",
+      "leaveType": "إجازة مرضية"
     }
   ]
 }
